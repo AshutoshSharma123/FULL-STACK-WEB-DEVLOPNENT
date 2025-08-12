@@ -1,0 +1,36 @@
+html,body{
+
+    background-color:rgb(15, 15, 15);
+    color: white;
+    height: 100vh;
+    width: 100vw;   
+}
+
+#parent {
+    height: 50%;
+    width: 50%;
+    position: relative;
+    background-color:red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#box1{
+    position: relative;
+    width: 10%;
+    height: 10%;
+    background-color: rgb(82, 207, 174);
+}
+#box2{
+    position: relative;
+    width: 10%;
+    height: 10%;
+    background-color: rgb(58, 19, 214);
+}
+#box3{
+    position: relative;
+    width: 10%;
+    height: 10%;
+    background-color: rgb(225, 172, 26);
+}

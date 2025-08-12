@@ -1,0 +1,155 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+main{
+  padding: 1rem;
+
+
+    .view-1{
+
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        padding-top: 1rem;
+        background-color: rgb(246, 243, 243);
+   
+.top{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+
+
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    span{
+        opacity:0.6;
+    }
+    
+}
+.bottom{
+
+padding: 1rem;
+width: 100%;
+max-height: 20rem;
+  aspect-ratio: 1/1;
+
+.images{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "a a b b"
+    "a a b b"
+    "a a b b"
+    "a a b b"
+    "a a b b"
+    "a a c c"
+    "a a c c"
+    "a a c c";  
+    gap: 1rem;
+    max-height: 30rem;
+
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.3rem;
+}
+
+    .img-a{
+        grid-area: a;
+        
+    }
+       .img-b{
+        grid-area: b;
+        aspect-ratio: 3/4;
+    }
+    .img-c{
+        grid-area: c;
+aspect-ratio    : 16/9;
+    }
+}
+
+
+
+
+
+    
+    
+
+}
+
+
+
+
+    }
+}
+
+
+@media (min-width:800px) {
+main{
+        .view-1{
+        flex-direction: row;
+        height: 100%;
+        background-color: rgb(236, 249, 249);
+
+
+        .top{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        h1{
+            font-size: 6rem;
+            line-height: 90%;
+        }
+        p{
+            font-size:1.4rem;
+
+        }
+    }
+
+
+
+        .bottom {
+            max-height: 90%;
+            width: 52%;
+            aspect-ratio: 1/1;
+
+
+            .images {
+                max-width: 50rem;
+                grid-template-areas:
+                    ". . b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a c c"
+                    "a a c c"
+                    ". . c c"
+                ;
+
+
+            }
+        }
+}
+}
+
+    
+}

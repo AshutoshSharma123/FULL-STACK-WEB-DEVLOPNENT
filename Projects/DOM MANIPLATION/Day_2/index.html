@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <article class="card" aria-labelledby="person-name-1">
+        <img class="avatar" id="person-avatar-1" src="https://via.placeholder.com/300x300.png?text=Photo"
+            alt="Profile of Priya Sharma">
+
+        <div class="meta">
+            <h2 id="person-name-1" class="name">Priya Sharma <span id="friend-status" class="status"
+                    hidden>Friend</span>
+            </h2>
+            <p class="subtitle">Frontend Developer · Bangalore</p>
+
+            <div class="actions">
+                <button id="friendBtn" class="btn-add" aria-pressed="false">Add Friend</button>
+                <button id="removeBtn" class="btn-remove" style="display:none">Remove</button>
+            </div>
+        </div>
+
+        <span class="sr-only" id="friend-state-msg" aria-live="polite"></span>
+
+        <script>
+            // Simple friend toggle logic
+            const friendBtn = document.getElementById('friendBtn');
+            const removeBtn = document.getElementById('removeBtn');
+            const status = document.getElementById('friend-status');
+            const stateMsg = document.getElementById('friend-state-msg');
+
+            // load state (optional) - stored per name
+            const storageKey = 'friendState:PriyaSharma';
+            let isFriend = localStorage.getItem(storageKey) === 'true';
+
+            function render() {
+                if (isFriend) {
+                    friendBtn.textContent = 'Added';
+                    friendBtn.classList.remove('btn-add');
+                    friendBtn.setAttribute('aria-pressed', 'true');
+                    friendBtn.disabled = true;
+                    removeBtn.style.display = 'inline-block';
+                    status.hidden = false;
+                    stateMsg.textContent = 'You and Priya are friends.';
+                } else {
+                    friendBtn.textContent = 'Add Friend';
+                    friendBtn.classList.add('btn-add');
+                    friendBtn.setAttribute('aria-pressed', 'false');
+                    friendBtn.disabled = false;
+                    removeBtn.style.display = 'none';
+                    status.hidden = true;
+                    stateMsg.textContent = 'Priya is not your friend.';
+                }
+            }
+
+            friendBtn.addEventListener('click', () => {
+                isFriend = true;
+                localStorage.setItem(storageKey, 'true');
+                render();
+            });
+
+            removeBtn.addEventListener('click', () => {
+                // confirm before removing
+                const ok = confirm('Remove Priya from your friends?');
+                if (!ok) return;
+                isFriend = false;
+                localStorage.setItem(storageKey, 'false');
+                render();
+            });
+
+            // initial render
+            render();
+        </script>
+    </article>
+</body>
+
+</html>

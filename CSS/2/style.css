@@ -1,0 +1,22 @@
+*{
+    background-color:rgb(201, 244, 177);
+    font-family: Arial, sans-serif;
+}
+ul{
+    padding: 20px;
+    text-align: center;
+    word-spacing: 10%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20 px;
+}
+img{
+    height: 300px;
+    width: 220px;
+ 
+}
+div{
+    
+    justify-content: center;
+  
+}

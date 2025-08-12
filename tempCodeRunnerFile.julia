@@ -1,0 +1,35 @@
+import graphviz
+
+# Create a new ER diagram using Graphviz
+er = graphviz.Digraph('ER Diagram', format='png')
+er.attr(rankdir='LR', size='10')
+
+# Entities
+entities = {
+    "Student": ["StudentID (PK)", "Name", "Address", "Gender", "BirthDate", "Degree"],
+    "Course": ["CourseCode (PK)", "Name", "Description", "Points", "FinalExamDate"],
+    "Instructor": ["IRDNumber (PK)", "Name", "Address", "HomePhone", "OfficePhone", "Gender", "BirthDate", "Salary", "Position"],
+    "Department": ["DeptName (PK)", "TotalStudents"],
+    "Club": ["ClubName (PK)", "Budget", "MeetingDay", "MeetingTime"],
+    "Activity": ["ActivityID (PK)", "Type", "Date", "Time", "Location"]
+}
+
+# Add entities to diagram
+for entity, attributes in entities.items():
+    label = f"{entity}|" + "|".join(attributes)
+    er.node(entity, shape="record", label=label)
+
+# Relationships
+er.edge("Student", "Department", label="SupervisedBy")
+er.edge("Student", "Course", label="EnrolledIn (Grade)")
+er.edge("Course", "Department", label="OfferedBy")
+er.edge("Course", "Instructor", label="TaughtBy")
+er.edge("Instructor", "Department", label="WorksIn")
+er.edge("Department", "Instructor", label="ManagedBy (1)")
+er.edge("Student", "Club", label="MemberOf")
+er.edge("Club", "Activity", label="Sponsors")
+er.edge("Club", "Instructor", label="ModeratedBy")
+er.edge("Activity", "Club", label="SponsoredBy (1)")
+
+er.render('/mnt/data/university_er_diagram', cleanup=False)
+'/mnt/data/university_er_diagram.png'
