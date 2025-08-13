@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Real Loading Progress</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Loader -->
+    <div id="loader" class="flex flex-col items-center justify-center min-h-screen bg-white fixed inset-0 z-50">
+        <div class="w-64 h-4 bg-gray-300 rounded-full overflow-hidden">
+            <div id="growth" class="bg-blue-500 h-full w-0 transition-all duration-100 ease-linear"></div>
+        </div>
+        <span id="percent" class="mt-2 text-lg font-semibold">0%</span>
+        <p class="text-sm text-gray-500 mt-1">Loading...</p>
+    </div>
+
+    <!-- Page Content -->
+    <div id="content" class="hidden p-10">
+        <h1 class="text-4xl font-bold mb-4">🚀 Welcome to My Website</h1>
+        <p class="mb-6">Here’s some amazing landing page content that only shows when everything is ready.</p>
+
+        <!-- Example big images -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <img src="https://picsum.photos/1200/800?random=1" class="rounded-lg shadow" alt="Random landscape 1">
+            <img src="https://picsum.photos/1200/800?random=2" class="rounded-lg shadow" alt="Random landscape 2">
+            <img src="https://picsum.photos/1200/800?random=3" class="rounded-lg shadow" alt="Random landscape 3">
+        </div>
+    </div>
+
+    <script>
+        let loader = document.querySelector('#loader');
+        let percent = document.querySelector('#percent');
+        let growth = document.querySelector('#growth');
+        let content = document.querySelector('#content');
+
+        // Get all loadable assets (here only images, but can extend later)
+        let assets = document.querySelectorAll("img");
+        let totalAssets = assets.length;
+        let loadedAssets = 0;
+        let displayProgress = 0; // For smooth animation
+
+        function updateProgress(realProgress) {
+            // Smooth increment
+            let animation = setInterval(() => {
+                if (displayProgress >= realProgress) {
+                    clearInterval(animation);
+                    return;
+                }
+                displayProgress++;
+                percent.innerText = `${displayProgress}%`;
+                growth.style.width = `${displayProgress}%`;
+
+                // Hide loader when done
+                if (displayProgress >= 100) {
+                    loader.style.display = 'none';
+                    content.classList.remove('hidden');
+                }
+            }, 10); // speed of smooth animation
+        }
+
+        // Track each asset's loading
+        assets.forEach(asset => {
+            if (asset.complete) {
+                // If already loaded (cached)
+                loadedAssets++;
+                updateProgress(Math.round((loadedAssets / totalAssets) * 100));
+            } else {
+                asset.addEventListener('load', () => {
+                    loadedAssets++;
+                    updateProgress(Math.round((loadedAssets / totalAssets) * 100));
+                });
+                asset.addEventListener('error', () => {
+                    loadedAssets++;
+                    updateProgress(Math.round((loadedAssets / totalAssets) * 100));
+                });
+            }
+        });
+
+        // In case there are no images
+        if (totalAssets === 0) {
+            updateProgress(100);
+        }
+    </script>
+
+</body>
+
+</html>
