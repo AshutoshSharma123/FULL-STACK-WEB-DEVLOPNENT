@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body width="100%" class="flex justify-center items-center h-screen bg-gray-100">
+    <button class="load w-[100] h-[2rem] bg-green-600 text-white px-5 text-sm rounded-lg "> Download</button>
+    <div id="loader"
+        class=" w-2/3 h-[3rem] display-0 justify-center items-center flex align-center hidden flex-col rounded-lg ">
+        <div id="growth" class=" h-[1rem] bg-green-200 w-0/5 rounded-lg"></div>
+        <div id="percent" class="w-full align-center justify-center flex mt-2">
+            <h2>0 %</h2>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
