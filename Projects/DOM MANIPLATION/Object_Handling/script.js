@@ -35,7 +35,7 @@ array.forEach(function (elem, id) {
     sum += `    <div class="card">
             <img src="${elem.img}" class=${id}
             alt="">
-        <h1 class=>${elem.user}</h1>
+        <h1  class=>${elem.user}</h1 >
         <h1>${elem.age}</h1>
         <h1>${elem.occupation}</h1>
 

@@ -17,18 +17,17 @@ flex-wrap: wrap;
 }
 .card{
 
-    padding:2%;
-    background-color: rgb(241, 245, 246);
+    padding:0.5%;
+    background-color: rgb(200, 203, 203);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    width: 28%;
-    border-radius:0.1rem ;
+    width: 15rem;
+    border-radius:0.3rem ;
 
 img{
-    height: 80%;
+    height: 100%;
     width:100%;
     object-fit: cover;
     border-radius: 0.3rem;
@@ -36,6 +35,7 @@ img{
 h1{
     background-color: none;
     font-size: 1rem;
+    z-index: 2;
 }
 
 
