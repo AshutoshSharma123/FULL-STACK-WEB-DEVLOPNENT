@@ -71,10 +71,12 @@ let users = [
     }
 ];
 
-let card = ' '
-users.forEach((elem, id) => {
-    console.log(elem.user, id);
-    card += `    <div class="card">
+let body = document.querySelector('body')
+function hero() {
+    let card = ' '
+
+    users.forEach((elem, id) => {
+        card += `    <div class="card">
         <img src=${elem.img} alt="">
 
         <div class="data">
@@ -90,7 +92,7 @@ users.forEach((elem, id) => {
             <div class="info">
                 <p> <b>${elem.occupation}</b>
                 </p>
-                <button id=${id}><b>Add</b></button>
+                <button id=${id}>Add</button>
 
             </div>
 
@@ -98,11 +100,26 @@ users.forEach((elem, id) => {
         </div>
     </div>`
 
-})
+    })
 
-document.querySelector("body").innerHTML = card
 
-document.querySelector('button').addEventListener('click', function (dets) {
-    console.log(elem.dets);
+    body.innerHTML = card
 
-})
+}
+
+hero()
+
+document.querySelector('body').addEventListener('click', function (dets) {
+    console.log(dets);
+    let gold = users[dets.target.id]
+    console.log(gold);
+    gold.user = 'Sunny Deol'
+    console.log(users);
+    hero();
+
+
+
+});
+
+
+

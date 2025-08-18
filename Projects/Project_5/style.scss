@@ -11,6 +11,8 @@ html,body{
 height: 100%;
 width: 100%;
 display: flex;
+align-items:center ;
+justify-content: center;
 flex-wrap: wrap;
 padding:3%;
 gap: 2rem;
@@ -61,6 +63,7 @@ background-color: rgba(139, 153, 167, 0.116);
         border: 0px;
 border-radius: 0.3rem;
 background-color: white;
+z-index: 3;
     }
     button:hover{
         scale: 0.9;
