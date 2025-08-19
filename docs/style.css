@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+  }
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
