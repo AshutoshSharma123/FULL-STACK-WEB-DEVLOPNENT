@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Restaurant</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Reset + Dark Theme */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0d0d0d;
+            color: #f5f5f5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #d4af37;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f5f5f5;
+            font-weight: 500;
+            transition: color .3s;
+        }
+
+        nav ul li a i {
+            margin-right: .5rem;
+            color: #d4af37;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: .8rem 1.5rem;
+            border: none;
+            background: #d4af37;
+            color: #0d0d0d;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        .btn:hover {
+            background: #b8962e;
+            color: #fff;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about,
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about img,
+        .contact img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .about-text i {
+            color: #d4af37;
+            margin-right: .5rem;
+        }
+
+        /* Menu */
+        .menu {
+            text-align: center;
+        }
+
+        .menu h2 {
+            margin-bottom: 2rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform .3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-item h3 {
+            margin: 1rem;
+            color: #d4af37;
+            font-size: 1.2rem;
+        }
+
+        .menu-item h3 i {
+            margin-right: .5rem;
+            color: #f5f5f5;
+        }
+
+        .menu-item p {
+            margin: 0 1rem 1.5rem;
+        }
+
+        /* Contact */
+        .contact-details p {
+            margin: 1rem 0;
+        }
+
+        .contact-details i {
+            margin-right: .5rem;
+            color: #d4af37;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #111;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo"><i class="fas fa-utensils"></i>LuxuryDine</div>
+        <ul>
+            <li><a href="#home"><i class="fas fa-house"></i>Home</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i>About</a></li>
+            <li><a href="#menu"><i class="fas fa-concierge-bell"></i>Menu</a></li>
+            <li><a href="#contact"><i class="fas fa-phone"></i>Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Experience Fine Dining</h1>
+            <p>A modern luxury restaurant with world-class cuisine.</p>
+            <button class="btn">Reserve Now</button>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <img src="https://images.unsplash.com/photo-1541542684-4c1e3f4d3d5b?auto=format&fit=crop&w=1600&q=80"
+            alt="Chef">
+        <div class="about-text">
+            <h2><i class="fas fa-user-tie"></i> About Us</h2>
+            <p>Welcome to LuxuryDine, where <strong>culinary art meets sophistication</strong>. Our chefs blend global
+                flavors with local ingredients to create a truly unforgettable dining experience.</p>
+            <p><i class="fas fa-hat-chef"></i> Michelin-starred chef curated menu</p>
+            <p><i class="fas fa-wine-glass-alt"></i> Handpicked premium wines</p>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <h2><i class="fas fa-utensil-spoon"></i> Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1604908177522-432c9a9991d1?auto=format&fit=crop&w=800&q=80"
+                    alt="Pasta">
+                <h3><i class="fas fa-bowl-food"></i>Pasta Primavera</h3>
+                <p>Fresh seasonal vegetables tossed with handmade pasta.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1553163147-622ab57e3e16?auto=format&fit=crop&w=800&q=80"
+                    alt="Steak">
+                <h3><i class="fas fa-drumstick-bite"></i>Grilled Steak</h3>
+                <p>Juicy steak grilled to perfection with garlic butter.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80"
+                    alt="Salad">
+                <h3><i class="fas fa-leaf"></i>Organic Salad</h3>
+                <p>Crisp greens with balsamic dressing and herbs.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80"
+                    alt="Dessert">
+                <h3><i class="fas fa-ice-cream"></i>Chocolate Dessert</h3>
+                <p>Rich and creamy chocolate layered indulgence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-details">
+            <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Street, City</p>
+            <p><i class="fas fa-phone"></i> +123 456 7890</p>
+            <p><i class="fas fa-envelope"></i> contact@luxurydine.com</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1600&q=80"
+            alt="Restaurant Interior">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 LuxuryDine. All rights reserved. | <i class="fab fa-facebook"></i> <i
+                class="fab fa-instagram"></i> <i class="fab fa-twitter"></i></p>
+    </footer>
+
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
