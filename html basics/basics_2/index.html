@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll with A tag</title>
+    <style>
+        body {
+            height: 2000px;
+            /* just to make scroll visible */
+        }
+
+        section {
+            margin-top: 500px;
+            padding: 50px;
+            background: lightgreen;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔗 link that triggers smooth scroll -->
+    <a href="#about" onclick="scrollToSection(event, 'about')">Go to About</a>
+
+    <section id="about">
+        <h2>About Section</h2>
+        <p>This is the about section.</p>
+    </section>
+
+    <script>
+        function scrollToSection(event, id) {
+            event.preventDefault(); // stop default jump
+            document.getElementById(id).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+
+</html>
