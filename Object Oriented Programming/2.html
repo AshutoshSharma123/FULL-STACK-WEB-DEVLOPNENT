@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function Employee(name, age, designation) {
+            this.name = name;
+            this.age = age;
+            this.designation = designation;
+
+        }
+
+        Employee.prototype.sayHello = function () {
+            console.log(`Hello this is ${this.name} . My age is ${this.age} and i am a ${this.designation}`);
+        }
+
+        let p1 = new Employee("ashutosh", 24, "developer");
+
+
+        let p2 = new Employee("Adhi", 21, 'accountant');
+
+
+
+
+        // always remember in javascript everything is an object and each object has its own prototype in which it has its own properties and methods if u want to check just on browser developer tool , check for example:
+        //Let arr=[1,2,3]
+        // open arr , u will get to know that it is an object and its prototype is Array.prototype
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // before object oriented programming we used function to write code using constructor
+
+        // older way of making constructor-->name always started with capital letter
+
+
+        // function Person(name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // let p1 = new Person("ashutosh", 24);
+        // console.log(p);
+        //let p2 = new Person("Adhi", 21);
+
+
+        // But after ES6 model we can use class and then make a constructor function
+
+        class Cars {
+            constructor(name, color, year, company, type) {
+                this.name = name;
+                this.color = color;
+                this.model = year;
+                this.company = company;
+                this.type = type;
+                // this.price = 100000;
+
+                // // in this exapmle we have added a new property price which is constant for all cars so intsead of putting this value in each constructur call ,we can use this.price=100000 once and then use it for all cars so that the minimal memory is used
+
+                // but still there is a better way i.e. prototype
+            }
+        }
+
+
+        Cars.prototype.price = 10000;
+
+
+
+        // Example usage to avoid standalone expressions
+        const car1 = new Cars('Audi', 'Black', 2022, 'Audi', 'Sedan');
+        let car2 = new Cars('BMW', 'Red', 2021, 'BMW', 'Sedan');
+        let car3 = new Cars('Mercedes', 'White', 2020, 'Mercedes', 'Sedan');
+        console.log(car1, car2, car3);
+
+    </script>
+</body>
+
+</html>
