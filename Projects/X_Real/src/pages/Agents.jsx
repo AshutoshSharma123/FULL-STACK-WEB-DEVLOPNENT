@@ -18,8 +18,13 @@ const Agents = () => {
         duration: 10,
         start: 'top 10%',
         end: 'top -100%',
+        markers: 'true',
         scrub: true,
         pin: true,
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: 'transform',
+        anticipatePinOffset: true,
         onUpdate: (elem) => {
 
           const imageIndex = Math.floor(elem.progress * imgArray.length)
@@ -32,37 +37,24 @@ const Agents = () => {
   })
 
   return (
-    <div className="">
-      <div className="section1">
-        {/* Pinned Image */}
-        <div
-          ref={imageDivRef}
-          className="absolute w-[34%] h-[25%] sm:top-30 sm:left-90 sm:h-[20vw] sm:w-[14vw] rounded-2xl bg-red-500"
-        >
-          <img ref={imgRef}
-            className="h-full w-full object-cover rounded-2xl"
-            src="https://images.unsplash.com/photo-1615109398623-88346a601842?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8fDB8fHww"
-            alt=""
-          />
+    <div className='parent w-full'>
+      <div id='page1' className='py-1 w-full'>
+        <div ref={imageDivRef} className='absolute overflow-hidden lg:h-[20vw] h-[30vw] lg:rounded-3xl mt-[-50vh] rounded-xl lg:w-[15vw] w-[25vw] lg:top-96 -top-80 lg:left-[30vw] left-[30vw]'>
+          <img ref={imgRef} className='h-full object-cover w-full' src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg" alt="" />
         </div>
-
-        {/* Text */}
-        <div className="font-[font3] relative">
-          <div className="text-[17vw] sm:mt-[30vh] sm:text-[14vw] text-center">
-            The Team
+        <div className='relative font-[font2] w-full'>
+          <div className=' mt-[20vh] '>
+            <h1 className='text-[30vw] text-center uppercase leading-[18vw]'>THE
+              TEAM</h1>
           </div>
-          <div className="text-center mx-auto sm:text-right w-[70%] sm:w-[45%] sm:mx-[52%]">
-            <p className="sm:text-[2vw]">
-              Our dedicated agents bring expertise, creativity, and commitment to
-              every project. With deep industry knowledge and personalized
-              service, they transform visions into reality, ensuring every client
-              receives trusted guidance and exceptional results.
-            </p>
+          <div className=' lg:mt-20 mt-4 p-1 w-[40%] sm:mx-[60%]   '>
+            <p className=' sm:text-[2vw] w-[90%] text-right  leading-tight'>A strong team of realty agents blends trust, market expertise, and client focus. Together, they navigate challenges, share insights, and achieve success by turning property goals into lasting relationships and results.</p>
           </div>
         </div>
       </div>
+      <div id='page2' className=" h-screen">
 
-      <div className="section2 h-screen"></div>
+      </div>
     </div>
   )
 }
