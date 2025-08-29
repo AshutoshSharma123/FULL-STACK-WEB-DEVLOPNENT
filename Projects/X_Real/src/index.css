@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family:'font1';
+  src:url('/fonts/Tektur-VariableFont_wdth,wght.ttf')
+}
+@font-face {
+  font-family:'font2';
+  src:url('/fonts/Tektur_Condensed-Medium.ttf')
+}
+@font-face {
+  font-family:'font3';
+  src:url('/fonts/Tektur-VariableFont_wdth,wght.ttf')
+}
+
+body{
+  background-color:black;
+  color:white;
+}
