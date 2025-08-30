@@ -47,8 +47,8 @@ const Agents = () => {
             <h1 className='text-[30vw] text-center uppercase leading-[18vw]'>THE
               TEAM</h1>
           </div>
-          <div className=' lg:mt-20 mt-4 p-1 w-[40%] sm:mx-[60%]   '>
-            <p className=' sm:text-[2vw] w-[90%] text-right  leading-tight'>A strong team of realty agents blends trust, market expertise, and client focus. Together, they navigate challenges, share insights, and achieve success by turning property goals into lasting relationships and results.</p>
+          <div className=' lg:mt-20 mt-4 p-1 sm:w-[40%] sm:mx-[60%]  w-full   flex flex-col justify-center items-center'>
+            <p className=' sm:text-[2vw] text-[4vw] w-[70%] sm:text-right text-center text-light leading-tight'>A strong team of realty agents blends trust, market expertise, and client focus. Together, they navigate challenges, share insights, and achieve success by turning property goals into lasting relationships and results.</p>
           </div>
         </div>
       </div>

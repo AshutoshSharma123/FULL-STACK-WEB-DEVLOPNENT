@@ -15,7 +15,7 @@ const FullScreenNav = () => {
 
     function gsapAnimation() {
         const tl = gsap.timeline()
-        tl.to('.fullscreennav', {
+        tl.to('#fullscreennav', {
             display: 'block'
         })
         tl.to('.stairing', {
