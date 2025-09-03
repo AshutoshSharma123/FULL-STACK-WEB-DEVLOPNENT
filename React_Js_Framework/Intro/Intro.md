@@ -119,3 +119,7 @@ With Node.js, developers can use JavaScript for **backend (server-side) programm
 - Microservices  
 - Server-side rendering with React/Next.js  
 - Command-line tools  
+
+
+## 15. What is a Babel?
+**Babel** is a **compiler** that converts **JavaScript** code into **JavaScript code** that is **compatible with all browsers**.
