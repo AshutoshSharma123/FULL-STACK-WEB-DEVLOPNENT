@@ -1,68 +1,27 @@
 import React, { useState } from 'react'
+import Create from './component/Create'
+import Read from './component/Read'
 
 const App = () => {
 
   const [todo, setTodo] = useState([{ id: 1, title: "Learn React", completed: false }])
 
-  const [title, settitle] = useState('')
-  const [desc, setdesc] = useState('')
-  const [urgency, setUrgency] = useState('')
-  const [gender, setgender] = useState('male')
+
+
+  console.log(todo);
+
+
+
+
+
   return (
-    <div>
+    <div className='flex flex-col justify-center items-center w-full border-1 border-gray-300 mt-[10%] p-[1rem]'>
 
-      <form action="">
-        <input type="text"
-          placeholder='title'
-          onChange={(e) => {
-            settitle(e.target.value)
-            console.log(e.target.value)
-          }}
-          value={title} />
-        <input type="text" placeholder='Description'
-          onChange={(e) => {
-            setdesc(e.target.value)
-            console.log(e.target.value);
-          }}
-          value={desc}
-        />
-        <input type="Checkbox"
-          value='check'
-          onChange={(e) => {
-            console.log(e.target.checked);
+      <h1 className='text-3xl font-bold text-blue-500'>To-Do List</h1>
+      <Create todo={todo} setTodo={setTodo} />
 
-          }}
-        />
-        <select onChange={(e) => {
-          console.log(e.target.value)
-          setUrgency(e.target.value)
-        }}
-          value={urgency}>
-          <option value="important">Important</option>
-          <option value="veryimportant">Very Important</option>
-          <option value="notimportant">Not Important</option>
-        </select>
-
-
-        <input type="radio" value='male'
-          onChange={(e) => {
-            setgender(e.target.value)
-            console.log(e.target.value)
-          }}
-          checked={gender == 'male' && true}
-        />
-        <input type="radio" value='female' onChange={(e) => {
-          setgender(e.target.value)
-          console.log(e.target.value)
-        }}
-          checked={gender == 'female' && true} />
-
-
-        <button >Create</button>
-
-      </form>
-
-
+      <br />
+      <Read todo={todo} setTodo={setTodo} />
     </div>
   )
 }
