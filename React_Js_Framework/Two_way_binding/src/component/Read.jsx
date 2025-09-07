@@ -1,4 +1,4 @@
-import React from 'react'
+import { toast } from "react-toastify"
 
 const Read = (props) => {
     const todo = props.todo
@@ -6,6 +6,7 @@ const Read = (props) => {
     const deleteHandler = (id) => {
         const filteredtodo = todo.filter((item) => item.id !== id) //filtering the todo
         setTodo(filteredtodo)
+        toast.error('todo deleted successfully !')
 
 
     }
