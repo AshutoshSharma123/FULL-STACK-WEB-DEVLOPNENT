@@ -3,9 +3,11 @@ import { useState } from 'react'
 import { nanoid } from 'nanoid'
 import { useForm } from 'react-hook-form'
 import { toast } from 'react-toastify'
-const Create = (props) => {
-    const todo = props.todo
-    const setTodo = props.setTodo
+import { useContext } from 'react'
+import { todocontext } from '../Wraper'
+const Create = () => {
+    const [todo, setTodo] = useContext(todocontext)
+
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
 
     const submitHandler = (data) => {
