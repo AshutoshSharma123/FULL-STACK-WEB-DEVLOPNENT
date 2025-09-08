@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Nav = () => {
     return (
         <div className='flex gap-4'>
-            <Link to="/">Home</Link>
-            <Link to="/product">Product</Link>
-            <Link to="/service">Service</Link>
-            <Link to="/about">About</Link>
+            <NavLink style={({ isActive }) => isActive ? { color: "red" } : { color: "white" }} to="/" >Home</NavLink>
+            <NavLink style={({ isActive }) => isActive ? { color: "red" } : { color: "white" }} to="/product">Product</NavLink>
+            <NavLink style={({ isActive }) => isActive ? { color: "red" } : { color: "white" }} to="/service">Service</NavLink>
+            <NavLink style={({ isActive }) => isActive ? { color: "red" } : { color: "white" }} to="/about">About</NavLink>
         </div>
     )
 }
