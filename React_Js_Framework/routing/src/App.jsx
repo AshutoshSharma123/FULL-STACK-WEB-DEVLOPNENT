@@ -1,14 +1,11 @@
-
-import Nav from './components/Nav'
-
-import MainRoutes from './components/MainRoutes'
-
+import React from 'react'
+import MainRoutes from './routes/MainRoutes.jsx'
+import Navbar from './components/Navbar.jsx'
 const App = () => {
   return (
-    <div className='text-3xl h-screen w-screen flex flex-col   bg-black text-white'>
-      <Nav />
+    <div className='w-full h-screen text-white bg-gray-700 p-5 font-thin'>
+      <Navbar />
       <MainRoutes />
-
 
     </div>
   )
