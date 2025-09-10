@@ -2,8 +2,10 @@ import { useForm } from 'react-hook-form'
 import { nanoid } from 'nanoid'
 import { useContext } from 'react'
 import { recipeContext as RecipeContext } from '../context/RecipeContext'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 const Create = () => {
-
+    const navigate = useNavigate();
     const { data, setData } = useContext(RecipeContext)
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -16,7 +18,10 @@ const Create = () => {
         copyData.push(recipe)
         setData(copyData)
         console.log(copyData);
+
+        toast.success("Recipe Created Successfully")
         reset()
+
     }
 
 
@@ -51,7 +56,7 @@ const Create = () => {
 
 
             <textarea
-                {...register('description')}
+                {...register('desc')}
                 placeholder='Recipe Description'
                 className='border-b outline-none bg-transparent  p-2 text-lg h-40'>
 
