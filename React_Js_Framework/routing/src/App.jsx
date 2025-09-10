@@ -3,7 +3,8 @@ import MainRoutes from './routes/MainRoutes.jsx'
 import Navbar from './components/Navbar.jsx'
 const App = () => {
   return (
-    <div className='w-full h-screen text-white bg-gray-700 p-5 font-thin'>
+    <div className='font-[font1] w-full h-screen text-black bg-cover bg-no-repeat bg-center bg-style p-5 '
+      style={{ backgroundImage: "url(/src/assets/wallpaper.jpg)" }}>
       <Navbar />
       <MainRoutes />
 
