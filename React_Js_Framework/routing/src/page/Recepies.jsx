@@ -12,7 +12,7 @@ const Recepies = () => {
     ))
 
     return (
-        <div className='flex flex-wrap justify-center '>{renderRecipes}</div>
+        <div className='flex flex-wrap justify-center w-full h-full gap-4  items-center  '>{renderRecipes}</div>
     )
 }
 

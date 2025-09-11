@@ -48,12 +48,20 @@ const Create = () => {
                 {...register('category')}
                 className='rounded-md w-[20vw] border-b outline-none bg-white  p-2 text-lg text-black mb-2'
             >
-                <option value="cat_1">Indian</option>
-                <option value="cat_2">Continental</option>
-                <option value="cat_3">Chinese</option>
+                <option value="Indian">Indian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Continental">Continental</option>
+                <option value="Japanese">Japanese</option>
 
             </select>
+            <select name="" id=""
+                {...register('tag')}
+                className='rounded-md w-[20vw] border-b outline-none bg-white  p-2 text-lg text-black mb-2'
+            >
+                <option value="veg">Veg</option>
+                <option value="non-veg">Non-Veg</option>
 
+            </select>
 
             <textarea
                 {...register('desc')}

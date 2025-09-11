@@ -12,3 +12,11 @@
   font-weight: normal;
 
 }
+@font-face {
+  font-family: 'font3';
+  src: url('src/assets/InterTight-VariableFont_wght.ttf'),
+       url('src/assets/InterTight-VariableFont_wght.ttf') format('woff');
+  font-weight: normal;
+
+}
+
