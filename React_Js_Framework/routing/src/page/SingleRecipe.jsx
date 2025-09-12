@@ -5,6 +5,8 @@ import { recipeContext } from "../context/RecipeContext";
 import { useForm } from 'react-hook-form'
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "../utils/axios";
 const SingleRecipe = () => {
 
   const navigate = useNavigate();
@@ -21,10 +23,16 @@ const SingleRecipe = () => {
 
   const { title, image, desc } = recipe;
 
+  useEffect(() => {
+    console.log("SingleRecipe mounted");
 
 
-
-
+    return () => {
+      // cleanup code
+      console.log("SingleRecipe unmounted");
+    }
+  }, []) // square brackets to avoid infinite loop of useEffect to be called for unnecessary renders
+  // empty dependency array means this effect runs only once after the initial render and only renders the component .
 
 
   const { register, handleSubmit, formState: { errors } } = useForm({
@@ -35,7 +43,6 @@ const SingleRecipe = () => {
       desc: recipe.desc
     }
   });
-
 
 
   const submitHandler = (recipe) => {
@@ -51,16 +58,12 @@ const SingleRecipe = () => {
   }
 
 
-
   const deleteHandler = () => {
     const filteredRecipe = data.filter(r => r.id !== id)
     setData(filteredRecipe)
     toast.success('recipe deleted successfully !')
     navigate('/recepies')
   }
-
-
-
 
   return (
     <div className="w-full flex items-center gap-5 ">
