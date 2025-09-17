@@ -2,16 +2,34 @@ import { nanoid } from '@reduxjs/toolkit';
 
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { asyncregisterUser } from '../store/actions/userActions';
+import { useDispatch } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
 
     const { register, reset, handleSubmit } = useForm();
 
-    const registerHandler = (data) => {
-        const user = { id: nanoid(), ...data };
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    /*************  ✨ Windsurf Command ⭐  *************/
+    /**
+     * Handles the registration form submission.
+     * Creates a new user with the provided data, sets isAdmin to false, dispatches the asyncregisterUser action, and navigates to the login page.
+     * @param {Object} data - The form data, containing the username.
+     */
+    /*******  104ffa89-6ce9-4547-bd45-8a98a1bcb2d1  *******/
+
+    const registerHandler = (user) => {
+        user.id = nanoid();
+        user.isAdmin = false
         console.log(user);
-        reset();
+        dispatch(asyncregisterUser(user))
+        navigate('/login')
+
     }
 
 
