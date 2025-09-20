@@ -10,18 +10,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
-    const { register, reset, handleSubmit } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    /*************  ✨ Windsurf Command ⭐  *************/
-    /**
-     * Handles the registration form submission.
-     * Creates a new user with the provided data, sets isAdmin to false, dispatches the asyncregisterUser action, and navigates to the login page.
-     * @param {Object} data - The form data, containing the username.
-     */
-    /*******  104ffa89-6ce9-4547-bd45-8a98a1bcb2d1  *******/
 
     const registerHandler = (user) => {
         user.id = nanoid();

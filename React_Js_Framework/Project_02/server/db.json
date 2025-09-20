@@ -81,7 +81,7 @@
       "username": "555",
       "email": "555@gmail.com",
       "password": "555",
-      "isAdmin": false
+      "isAdmin": true
     },
     {
       "id": "8UZGuO6QYJwgNeuDX4Nd5",
@@ -105,11 +105,16 @@
       "price": 109.95,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "men's clothing",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
-      "rating": {
-        "rate": 3.9,
-        "count": 120
-      }
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+    },
+
+    {
+      "id": "KgxQfpGrz0iCgr0uA1q5K",
+      "title": "wef",
+      "price": "f",
+      "image": "https://chatgpt.com/c/68ce8c3e-b270-8328-b212-a7a85750557e",
+      "category": "wdqf",
+      "description": "q"
     }
   ],
   "carts": []
