@@ -27,18 +27,18 @@ const Login = () => {
                 {...register('username', { required: true })}
                 type="text" placeholder='Username'
                 className='outline-none border-b p-2 text-xl' /> */}
-
+            <input
+                {...register('email')}
+                type="email" placeholder='Email'
+                className='outline-none border-b p-2 text-xl'
+            />
             <input
                 {...register('password', { required: true })}
                 type="password" placeholder='Password'
                 className='outline-none border-b p-2 text-xl'
             />
 
-            <input
-                {...register('email')}
-                type="email" placeholder='Email'
-                className='outline-none border-b p-2 text-xl'
-            />
+
             <button type="submit"
                 className='bg-blue-600 w-3/7 p-2 mt-4 text-xl font-semibold hover:bg-blue-700 transition-all duration-300'
             >Login</button>

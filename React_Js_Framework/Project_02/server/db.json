@@ -47,6 +47,55 @@
       "email": "aashu123@gmail",
       "password": "123",
       "isAdmin": false
+    },
+    {
+      "id": "ObGTjQFQjzAo0UpFp0bsN",
+      "username": "Ashu",
+      "email": "aashusharma375@gmail.com",
+      "password": "Ashutosh",
+      "isAdmin": false
+    },
+    {
+      "id": "KjtAKLK6eliy0yuRvTqRM",
+      "username": "1234",
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "isAdmin": false
+    },
+    {
+      "id": "q_yw2DEuWfYFIwmkjY70z",
+      "username": "222",
+      "email": "222",
+      "password": "222",
+      "isAdmin": false
+    },
+    {
+      "id": "5wdOA1yuA5EyvwSl589sG",
+      "username": "333",
+      "email": "333@gmail.com",
+      "password": "333",
+      "isAdmin": false
+    },
+    {
+      "id": "jZG4mPV3fcRm4L7cV19bP",
+      "username": "555",
+      "email": "555@gmail.com",
+      "password": "555",
+      "isAdmin": false
+    },
+    {
+      "id": "8UZGuO6QYJwgNeuDX4Nd5",
+      "username": "888",
+      "email": "888@gmail.com",
+      "password": "888",
+      "isAdmin": false
+    },
+    {
+      "id": "J4ptBIOFqRklJ953kopjs",
+      "username": "44",
+      "email": "44@gmail.com",
+      "password": "44",
+      "isAdmin": false
     }
   ],
   "products": [
