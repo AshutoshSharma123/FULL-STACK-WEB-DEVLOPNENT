@@ -7,8 +7,8 @@ import axios from "../../api/axiosconfig.jsx";
 
 export const asyncloadProduct = () => async (dispatch, getState) => {
     try {
-        await axios.get('products');
-        dispatch(loadproduct());
+        const data = await axios.get('products');
+        dispatch(loadproduct(data.data));
     }
     catch (error) {
         console.log(error);

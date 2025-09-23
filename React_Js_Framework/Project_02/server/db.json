@@ -107,14 +107,21 @@
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
     },
-
     {
-      "id": "KgxQfpGrz0iCgr0uA1q5K",
-      "title": "wef",
-      "price": "f",
-      "image": "https://chatgpt.com/c/68ce8c3e-b270-8328-b212-a7a85750557e",
-      "category": "wdqf",
-      "description": "q"
+      "id": "VcgOUN1IXCfHb8FI6-pwr",
+      "title": "Omega SpeedMaster",
+      "price": "950000",
+      "image": "https://imgs.search.brave.com/64u9XRI-jYrK4dYqz06pTbHv2ntV7Xigp34imGwcVrA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NTY0NTMwMDctZWUw/MzYxNjk5MzRiP2Zt/PWpwZyZxPTYwJnc9/MzAwMCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1UQjhmRzl0Wldk/aEpUSXdkMkYwWTJo/OFpXNThNSHg4TUh4/OGZEQT0",
+      "category": "Luxury",
+      "description": "Omega SA is a Swiss luxury watchmaker based in Biel/Bienne, Switzerland, founded in 1848 by Louis Brandt in La Chaux-de-Fonds.\n The company, originally operating as Louis Brandt et Fils, incorporated the name Omega in 1903, becoming Louis Brandt et Frère-Omega Watch & Co., and officially changed its name to Omega SA in 1984.\n It is a subsidiary of the Swatch Group."
+    },
+    {
+      "id": "uUGKE2nA_gA8zb5hrWBy6",
+      "title": "Rolex Daytona",
+      "price": "800000 INR",
+      "image": "https://imgs.search.brave.com/bgax3vLDe5_0F32IEfpz9Deo9grCmtPJvCwABY3cHB8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5yb2xleC5jb20v/aW1hZ2UvdXBsb2Fk/L3FfYXV0bzplY28v/Zl9hdXRvL2NfbGlt/aXQsd18xOTIwL3Yx/NzI3MDg4Mjk3L3Jv/bGV4Y29tL2NvbGxl/Y3Rpb24vZmFtaWx5/LXBhZ2VzL3Byb2Zl/c3Npb25hbC13YXRj/aGVzL3N1Ym1hcmlu/ZXIvZmFtaWx5LXBh/Z2UvMjAyNC93YXRj/aC1zdWdnZXN0aW9u/cy9wcm9mZXNzaW9u/YWwtd2F0Y2hlcy1z/dWJtYXJpbmVyLXdh/dGNoLXN1Z2dlc3Rp/b25fMjQwOTA0X3Jv/bGV4X3N1Ym1hcmlu/ZXJfZDNfMzczMzAx/LTM3MzMwMi1iYXNl/X25ldF9vay00NDk1/OTM2ODVfY2FtMTdf/cHJfMDk0Ml9yZ2Jf/MDNfci5qcGc",
+      "category": "Lurury watch",
+      "description": "Rolex is a Swiss luxury watch brand and manufacturer based in Geneva, Switzerland, founded in 1905 as Wilsdorf and Davis by German businessman Hans Wilsdorf and his brother-in-law Alfred Davis in London.\n The company registered the Rolex brand name in 1908 and moved its operations to Geneva after World War I due to economic instability."
     }
   ],
   "carts": []
