@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <div className="w-screen h-screen text-white bg-gray-800 p-4">
+    <div className="w-full min-h-screen text-white bg-gray-800 p-4">
       <Navbar />
       <MainRoute />
     </div>

@@ -1,7 +1,6 @@
-
-
 import { loadproduct } from "../features/productSlice.jsx";
 import axios from "../../api/axiosconfig.jsx";
+
 
 
 
@@ -26,4 +25,30 @@ export const asynccreateProduct = (product) => async (dispatch, getState) => {
         console.log(error);
     }
 };
+
+
+// export const asyncupdateProduct = (id, product) => async (dispatch, getState) => {
+//     try {
+//         const { data } = await axios.patch('products' + id, product);
+//         dispatch(asyncloadProduct());
+//         console.log(data);
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// };
+
+export const asyncupdateProduct = (id, product) => async (dispatch, getState) => {
+    try {
+        const { data } = await axios.patch('products/' + id, product);
+        dispatch(asyncloadProduct());
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+
+
+
 

@@ -110,7 +110,7 @@
     {
       "id": "VcgOUN1IXCfHb8FI6-pwr",
       "title": "Omega SpeedMaster",
-      "price": "950000",
+      "price": "00000 INR",
       "image": "https://imgs.search.brave.com/64u9XRI-jYrK4dYqz06pTbHv2ntV7Xigp34imGwcVrA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NTY0NTMwMDctZWUw/MzYxNjk5MzRiP2Zt/PWpwZyZxPTYwJnc9/MzAwMCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1UQjhmRzl0Wldk/aEpUSXdkMkYwWTJo/OFpXNThNSHg4TUh4/OGZEQT0",
       "category": "Luxury",
       "description": "Omega SA is a Swiss luxury watchmaker based in Biel/Bienne, Switzerland, founded in 1848 by Louis Brandt in La Chaux-de-Fonds.\n The company, originally operating as Louis Brandt et Fils, incorporated the name Omega in 1903, becoming Louis Brandt et Frère-Omega Watch & Co., and officially changed its name to Omega SA in 1984.\n It is a subsidiary of the Swatch Group."
@@ -122,6 +122,14 @@
       "image": "https://imgs.search.brave.com/bgax3vLDe5_0F32IEfpz9Deo9grCmtPJvCwABY3cHB8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5yb2xleC5jb20v/aW1hZ2UvdXBsb2Fk/L3FfYXV0bzplY28v/Zl9hdXRvL2NfbGlt/aXQsd18xOTIwL3Yx/NzI3MDg4Mjk3L3Jv/bGV4Y29tL2NvbGxl/Y3Rpb24vZmFtaWx5/LXBhZ2VzL3Byb2Zl/c3Npb25hbC13YXRj/aGVzL3N1Ym1hcmlu/ZXIvZmFtaWx5LXBh/Z2UvMjAyNC93YXRj/aC1zdWdnZXN0aW9u/cy9wcm9mZXNzaW9u/YWwtd2F0Y2hlcy1z/dWJtYXJpbmVyLXdh/dGNoLXN1Z2dlc3Rp/b25fMjQwOTA0X3Jv/bGV4X3N1Ym1hcmlu/ZXJfZDNfMzczMzAx/LTM3MzMwMi1iYXNl/X25ldF9vay00NDk1/OTM2ODVfY2FtMTdf/cHJfMDk0Ml9yZ2Jf/MDNfci5qcGc",
       "category": "Lurury watch",
       "description": "Rolex is a Swiss luxury watch brand and manufacturer based in Geneva, Switzerland, founded in 1905 as Wilsdorf and Davis by German businessman Hans Wilsdorf and his brother-in-law Alfred Davis in London.\n The company registered the Rolex brand name in 1908 and moved its operations to Geneva after World War I due to economic instability."
+    },
+    {
+      "id": "4wNzVcfWCwei009SAk2Lq",
+      "title": "Omega SeaMaster",
+      "price": "20000",
+      "image": "https://imgs.search.brave.com/VZPYgXngBH1eGgUrxafv_bSvzgy3OPMUmoFcyMcchrs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi80LzQ2L09t/ZWdhX1NlYW1hc3Rl/cl9Dby1BeGlhbC5q/cGcvNTEycHgtT21l/Z2FfU2VhbWFzdGVy/X0NvLUF4aWFsLmpw/Zw",
+      "category": "Lurury watch",
+      "description": "Born in 1948, the Seamaster collection possess an exquisite range of timepiece designs, each with their own distinct style and purpose. From the classic elegance of the Aqua Terra to the ingenious functionality of the Diver 300M, there is a model to suit every taste and need."
     }
   ],
   "carts": []

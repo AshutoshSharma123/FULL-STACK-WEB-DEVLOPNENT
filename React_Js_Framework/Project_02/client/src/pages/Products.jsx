@@ -8,7 +8,7 @@ const Products = () => {
     if (!data || data.length === 0) return "Loading....";
 
     return (
-        <div className="w-full flex flex-wrap justify-center gap-6 px-4">
+        <div className="w-full min-h-screen flex flex-wrap justify-center gap-6 px-4">
             {data.map((product) => (
                 <div
                     key={product.id}
