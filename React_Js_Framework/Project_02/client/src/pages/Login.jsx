@@ -1,4 +1,4 @@
-import { nanoid } from '@reduxjs/toolkit';
+
 
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
@@ -8,11 +8,11 @@ import { useDispatch } from 'react-redux';
 const Login = () => {
 
 
-    const { register, reset, handleSubmit } = useForm();
+    const { register, handleSubmit } = useForm();
     const dispatch = useDispatch();
 
     const loginHandler = (data) => {
-        const user = { id: nanoid(), ...data };
+        const user = { ...data };
 
 
         dispatch(asyncloginUser(user))
@@ -23,10 +23,7 @@ const Login = () => {
         <form
             onSubmit={handleSubmit(loginHandler)}
             className='flex flex-col w-1/2 justify-center items-center  rounded-md p-4' action="">
-            {/* <input
-                {...register('username', { required: true })}
-                type="text" placeholder='Username'
-                className='outline-none border-b p-2 text-xl' /> */}
+
             <input
                 {...register('email')}
                 type="email" placeholder='Email'
@@ -54,3 +51,6 @@ const Login = () => {
 }
 
 export default Login
+
+
+

@@ -12,7 +12,7 @@ const Products = () => {
             {data.map((product) => (
                 <div
                     key={product.id}
-                    className="w-4/5 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
+                    className="w-4/5 sm:w-1/2 md:w-1/3 lg:w-1/4 h-1/4 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
                 >
                     {/* Image */}
                     <div className="w-full aspect-[4/3] overflow-hidden">

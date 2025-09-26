@@ -1,6 +1,7 @@
 
 import axios from "../../api/axiosconfig.jsx";
 import { loadUser } from "../features/userSlice.jsx";
+import { removeUser } from "../features/userSlice.jsx";
 
 // Load user from localStorage
 export const asyncgetUser = () => async (dispatch, getState) => {
@@ -16,7 +17,7 @@ export const asyncgetUser = () => async (dispatch, getState) => {
 
 export const asynclogoutUser = () => (dispatch, getState) => {
     localStorage.removeItem("user");
-    dispatch(loadUser(null)); // clear Redux state too
+    dispatch(removeUser()); // clear Redux state too
     console.log("user logged out");
 };
 
@@ -34,9 +35,12 @@ export const asyncloginUser = (user) => async (dispatch, getstate) => {
         const { data } = await axios.get(
             `/users?email=${user.email}&password=${user.password}`
         );
-        if (data[0].user) {
+        if (data.length > 0) {
             dispatch(loadUser(data)); // ✅ update Redux
             localStorage.setItem("user", JSON.stringify(data[0])); // ✅ persist
+        }
+        else {
+            console.log("Invalid credentials");
         }
     } catch (error) {
         console.log(error);

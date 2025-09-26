@@ -1,103 +1,60 @@
 {
   "users": [
     {
-      "id": "1",
-      "username": "Ashutosh",
-      "email": "aashusharma@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "tazCqhZG7_5l0J4lXlZT7",
-      "username": "kalu paa",
-      "email": "aashusharma375@gmail.com",
-      "password": "123",
-      "isadmin": true
-    },
-    {
-      "id": "oQ0IRT1MbepED_Da4tOu6",
-      "username": "kasndaka",
-      "email": "asknd",
-      "password": "ansdkna",
-      "isAdmin": false
-    },
-    {
-      "id": "hI-fLpAM_cgbWiZXt1SYy",
-      "username": "Adi",
-      "email": "Adi@gmail.com",
-      "password": "ADITYA123",
-      "isAdmin": false
-    },
-    {
-      "id": "7BYKhWj3oCumnnmsiTTzc",
-      "username": "aashu3380",
-      "email": "aashu123@gmail",
-      "password": "Ashu",
-      "isAdmin": false
-    },
-    {
-      "id": "YqZYiLOqx4FYXIlajhJ6r",
-      "username": "123",
-      "email": "123",
-      "password": "123",
-      "isAdmin": false
-    },
-    {
-      "id": "Z8pSx4qggChoOx1eerJNd",
-      "username": "123",
-      "email": "aashu123@gmail",
-      "password": "123",
-      "isAdmin": false
-    },
-    {
-      "id": "ObGTjQFQjzAo0UpFp0bsN",
-      "username": "Ashu",
-      "email": "aashusharma375@gmail.com",
-      "password": "Ashutosh",
-      "isAdmin": false
-    },
-    {
-      "id": "KjtAKLK6eliy0yuRvTqRM",
-      "username": "1234",
-      "email": "1234@gmail.com",
-      "password": "1234",
-      "isAdmin": false
-    },
-    {
-      "id": "q_yw2DEuWfYFIwmkjY70z",
-      "username": "222",
-      "email": "222",
-      "password": "222",
-      "isAdmin": false
-    },
-    {
-      "id": "5wdOA1yuA5EyvwSl589sG",
-      "username": "333",
-      "email": "333@gmail.com",
-      "password": "333",
-      "isAdmin": false
-    },
-    {
-      "id": "jZG4mPV3fcRm4L7cV19bP",
-      "username": "555",
-      "email": "555@gmail.com",
-      "password": "555",
+      "id": "CSRpvYrVxxn7klsm98Wnx",
+      "username": "111",
+      "email": "111@gmail.com",
+      "password": "111",
       "isAdmin": true
     },
     {
-      "id": "8UZGuO6QYJwgNeuDX4Nd5",
-      "username": "888",
-      "email": "888@gmail.com",
-      "password": "888",
+      "id": "3bcZSWCE25ckvBklbnpMm",
+      "username": "111",
+      "email": "111@gmail.com",
+      "password": "111",
       "isAdmin": false
     },
     {
-      "id": "J4ptBIOFqRklJ953kopjs",
-      "username": "44",
-      "email": "44@gmail.com",
-      "password": "44",
+      "id": "hD5DZCGAukEvXis-VEDfB",
+      "username": "555",
+      "email": "555@gmail.com",
+      "password": "555",
       "isAdmin": false
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "id": "M-gl7v8J_KJ27dtXxzayH",
+      "title": "Iphone 16",
+      "price": "4039",
+      "image": "https://imgs.search.brave.com/jxl1ZqsouIrcqxvepAJaiEcM_v5xfahsu9s8r8syVsM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y25ldC5jb20vYS9p/bWcvcmVzaXplLzdm/NjgzYmM1OGYzMzgx/NmU4Y2Y4MGY0Njlm/YjdlNjEwMjcwODhh/YjkvaHViLzIwMjQv/MDkvMTMvMzZlNzYw/YmYtMmU5MC00MzEz/LTlkNDQtMmJlZTg2/MDgwM2U3L2lwaG9u/ZS0xNi1wbHVzLWlw/aG9uZS0xNi00NTM0/LmpwZz9hdXRvPXdl/YnAmZml0PWNyb3Am/aGVpZ2h0PTM2MiZ3/aWR0aD02NDQ",
+      "category": "mobile",
+      "description": "The iPhone 16 and iPhone 16 Plus are smartphones developed and marketed by Apple, representing the eighteenth-generation iPhones, succeeding the iPhone 15 and iPhone 15 Plus.\n They were announced during the Apple Event at Apple Park in Cupertino, California, on September 9, 2024, marking the first time an iPhone release was announced on a Monday.\n The devices were unveiled alongside the higher-priced iPhone 16 Pro and 16 Pro Max.\n The iPhone 16 is equipped with an aluminum design with a color-infused glass back, except for the white and black models, and features a vertical camera layout, a return to the design seen on the iPhone 11 and iPhone 12."
+    },
+    {
+      "id": "22sv1uoPngVVmQ6RXd43K",
+      "title": "Apple Watch 10",
+      "price": "40000",
+      "image": "https://imgs.search.brave.com/nYvrFko91_hnuERbSOyIHEOJeEfu5VwmCdhgtV6ISCs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NzUxMjUwNjk0OTQt/NmEwYzU4MTlkMzQw/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1UVjhmR0Z3/Y0d4bEpUSXdkMkYw/WTJnbE1qQnpaWEpw/WlhNbE1qQTFmR1Z1/ZkRCOGZEQjhmSHd3",
+      "category": "Watch",
+      "description": "Apple Watch is a brand of smartwatch products developed and marketed by Apple Inc., first released on April 24, 2015.\n It integrates fitness tracking, health-oriented capabilities, and wireless telecommunication, operating with watchOS and other Apple products and services.\n As of September 2025, new Apple Watches come with watchOS 26 preinstalled and require an iPhone running iOS 26, which is compatible with the iPhone 11 or later.\n The device is designed to work in conjunction with a paired iPhone for configuration and data syncing, but can also connect to Wi-Fi for data-reliant tasks, including communications and audio streaming.\n LTE-equipped models can perform these functions over a mobile network and make and receive phone calls independently when the iPhone is not nearby or powered off."
+    },
+    {
+      "id": "W9sRDcJF3jYJL68Cef7IP",
+      "title": "AirPods",
+      "price": "10000",
+      "image": "https://imgs.search.brave.com/6gTMWHNuBoMgIyNe3_7YC--KDv_YuHG5aepcKFi_dBs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90LW1v/YmlsZS5zY2VuZTcu/Y29tL2lzL2ltYWdl/L1RtdXNwcm9kLzE5/NTk1MDU0MzY5OC1m/cm9udGltYWdl",
+      "category": "Earphones",
+      "description": "Apple AirPods are wireless Bluetooth earbuds designed and sold by Apple Inc. \n The first generation was announced on September 7, 2016, and released on December 13, 2016.\n Subsequent generations include the second generation, released on March 20, 2019 \n , the third generation on October 26, 2021 \n , and the AirPods 4, announced on September 9, 2024.\n The first-generation AirPods were discontinued on March 20, 2019, the second and third generations on September 9, 2024.\n\nThe AirPods feature a proprietary Apple W1 chip in the first generation, an H1 chip in the second and third generations, and the H2 chip in the AirPods 4.\n They include dual beam-forming microphones and optical sensors for detecting placement in the ear and enabling automatic pausing when removed.\n The AirPods 4 feature Bluetooth 5.3 and a USB-C charging case.\n The third-generation AirPods include IPX4 water resistance and MagSafe charging capability.\n The AirPods 4 also feature IP54 dust resistance and a smaller charging case."
+    },
+    {
+      "id": "l1LdES-D-IQLzs4b8lNd2",
+      "title": "Omega ",
+      "price": "5000",
+      "image": "https://imgs.search.brave.com/bgax3vLDe5_0F32IEfpz9Deo9grCmtPJvCwABY3cHB8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5yb2xleC5jb20v/aW1hZ2UvdXBsb2Fk/L3FfYXV0bzplY28v/Zl9hdXRvL2NfbGlt/aXQsd18xOTIwL3Yx/NzI3MDg4Mjk3L3Jv/bGV4Y29tL2NvbGxl/Y3Rpb24vZmFtaWx5/LXBhZ2VzL3Byb2Zl/c3Npb25hbC13YXRj/aGVzL3N1Ym1hcmlu/ZXIvZmFtaWx5LXBh/Z2UvMjAyNC93YXRj/aC1zdWdnZXN0aW9u/cy9wcm9mZXNzaW9u/YWwtd2F0Y2hlcy1z/dWJtYXJpbmVyLXdh/dGNoLXN1Z2dlc3Rp/b25fMjQwOTA0X3Jv/bGV4X3N1Ym1hcmlu/ZXJfZDNfMzczMzAx/LTM3MzMwMi1iYXNl/X25ldF9vay00NDk1/OTM2ODVfY2FtMTdf/cHJfMDk0Ml9yZ2Jf/MDNfci5qcGc",
+      "category": "Luxury",
+      "description": "asnja s"
+    }
+  ],
   "carts": []
 }

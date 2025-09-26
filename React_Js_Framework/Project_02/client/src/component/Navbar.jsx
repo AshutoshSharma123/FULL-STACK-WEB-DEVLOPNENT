@@ -1,13 +1,24 @@
 
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-
+import { asynclogoutUser } from '../store/actions/userActions'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
-
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const user = useSelector(state => state.userReducer.user)
     console.log(user);
+
+    const logoutHandler = () => {
+        dispatch(asynclogoutUser())
+        navigate('/login')
+    }
+
+
+
 
     return (
         <div className='flex gap-4 mb-4 text-lg justify-center'>
@@ -19,6 +30,7 @@ const Navbar = () => {
             {user ?
                 <>
                     <NavLink to={'/admin/create-product'}>Create Product</NavLink>
+                    <button onClick={logoutHandler}>Logout</button>
                 </>
                 :
                 <>
