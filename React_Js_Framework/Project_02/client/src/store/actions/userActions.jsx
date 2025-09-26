@@ -48,6 +48,22 @@ export const asyncloginUser = (user) => async (dispatch, getstate) => {
 };
 
 
+export const asyncupdateUser = (user) => async (dispatch, getState) => {
+    try {
+        // assuming your backend supports PUT /users/:id
+        const res = await axios.put(`/users/${user.id}`, user);
+
+        // ✅ update Redux
+        dispatch(loadUser(res.data));
+
+        // ✅ update localStorage
+        localStorage.setItem("user", JSON.stringify(res.data));
+
+        console.log("User updated successfully:", res.data);
+    } catch (error) {
+        console.log("Error while updating user", error);
+    }
+};
 
 
 
