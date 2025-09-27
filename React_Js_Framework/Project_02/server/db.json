@@ -1,24 +1,10 @@
 {
   "users": [
     {
-      "id": "CSRpvYrVxxn7klsm98Wnx",
-      "username": "111",
-      "email": "111@gmail.com",
-      "password": "111",
-      "isAdmin": true
-    },
-    {
       "id": "3bcZSWCE25ckvBklbnpMm",
       "username": "111",
       "email": "111@gmail.com",
-      "password": "111",
-      "isAdmin": false
-    },
-    {
-      "id": "hD5DZCGAukEvXis-VEDfB",
-      "username": "555",
-      "email": "555@gmail.com",
-      "password": "555",
+      "password": "12345",
       "isAdmin": false
     }
   ],

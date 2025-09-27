@@ -15,10 +15,10 @@ export const asyncgetUser = () => async (dispatch, getState) => {
     }
 };
 
+
 export const asynclogoutUser = () => (dispatch, getState) => {
     localStorage.removeItem("user");
     dispatch(removeUser()); // clear Redux state too
-    console.log("user logged out");
 };
 
 export const asyncregisterUser = (user) => async (dispatch, getstate) => {
@@ -48,10 +48,10 @@ export const asyncloginUser = (user) => async (dispatch, getstate) => {
 };
 
 
-export const asyncupdateUser = (user) => async (dispatch, getState) => {
+export const asyncupdateUser = (id, user) => async (dispatch, getState) => {
     try {
         // assuming your backend supports PUT /users/:id
-        const res = await axios.put(`/users/${user.id}`, user);
+        const res = await axios.patch('users/' + id, user);
 
         // ✅ update Redux
         dispatch(loadUser(res.data));
@@ -65,5 +65,13 @@ export const asyncupdateUser = (user) => async (dispatch, getState) => {
     }
 };
 
-
+export const asyncdeleteUser = (id) => async (dispatch, getState) => {
+    try {
+        // assuming your backend supports DELETE /users/:id
+        const res = await axios.delete('users/' + id);
+        dispatch(asynclogoutUser());
+    } catch (error) {
+        console.log("Error while deleting user", error);
+    }
+};
 

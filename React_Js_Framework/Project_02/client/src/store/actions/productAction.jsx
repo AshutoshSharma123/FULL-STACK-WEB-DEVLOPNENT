@@ -27,17 +27,6 @@ export const asynccreateProduct = (product) => async (dispatch, getState) => {
 };
 
 
-// export const asyncupdateProduct = (id, product) => async (dispatch, getState) => {
-//     try {
-//         const { data } = await axios.patch('products' + id, product);
-//         dispatch(asyncloadProduct());
-//         console.log(data);
-//     }
-//     catch (error) {
-//         console.log(error);
-//     }
-// };
-
 export const asyncupdateProduct = (id, product) => async (dispatch, getState) => {
     try {
         const { data } = await axios.patch('products/' + id, product);
