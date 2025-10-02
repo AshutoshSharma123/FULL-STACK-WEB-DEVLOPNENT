@@ -3,7 +3,18 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Products = () => {
+
     const data = useSelector((state) => state.productReducer.products);
+    const { userReducer: { users }, productReducer: { products } } = useSelector((state) => state);
+
+
+    const addtocartHandler = (id) => {
+        const copyuser = users.cart.push;
+        const cartItem = {
+            productId: id,
+            quantity: 1
+        }
+    }
 
     if (!data || data.length === 0) return "Loading....";
 
@@ -31,9 +42,15 @@ const Products = () => {
                         <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
                             {product.description.slice(0, 100)}...
                         </p>    <Link className="p-4 text-blue-600 text-center" to={`/product/${product.id}`}>more details</Link>
+
+
+
                         <p className="text-lg sm:text-xl font-bold text-yellow-600">
                             ${product.price}
                         </p>
+
+
+                        <button className='bg-gradient-to-r from-cyan-300 to-blue-600 text-white text-lg  py-2 px-4 mt-10 rounded hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500'>Add to Cart </button>
                     </div>
 
                 </div>
