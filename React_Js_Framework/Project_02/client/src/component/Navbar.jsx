@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <div className='flex gap-4 mb-4 text-lg justify-center'>
             <NavLink to={'/'}>Home</NavLink>
-            {/* <NavLink to={'/products'}>Products</NavLink> */}
+           
 
 
 

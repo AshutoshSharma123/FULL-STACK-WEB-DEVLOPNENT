@@ -9,7 +9,8 @@ const Products = () => {
 
 
     const addtocartHandler = (id) => {
-        const copyuser = users.cart.push;
+        const copyuser = [...users];
+        copyuser.cart.find((c) => c.id === id);
         const cartItem = {
             productId: id,
             quantity: 1
