@@ -3,25 +3,28 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Products = () => {
-
-    const data = useSelector((state) => state.productReducer.products);
-    const { userReducer: { users }, productReducer: { products } } = useSelector((state) => state);
+    const user = useSelector((state) => state.userReducer.user);
+    const products = useSelector((state) => state.productReducer.products);
 
 
     const addtocartHandler = (id) => {
-        const copyuser = [...users];
-        copyuser.cart.find((c) => c.id === id);
-        const cartItem = {
-            productId: id,
-            quantity: 1
+        const copyuser = { ...user };
+        const x = copyuser.cart.findIndex((c) => c.id === id);
+        console.log(x);
+        if (x == -1) {
+            copyuser.cart.push({ productId: id, quantity: 1 });
+
         }
+        else copyuser.cart[x].quantity++;
+
+
     }
 
-    if (!data || data.length === 0) return "Loading....";
+    if (!products || products.length === 0) return "Loading....";
 
     return (
         <div className="w-full min-h-screen flex flex-wrap justify-center gap-6 px-4">
-            {data.map((product) => (
+            {products.map((product) => (
                 <div
                     key={product.id}
                     className="w-4/5 sm:w-1/2 md:w-1/3 lg:w-1/4 h-1/4 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
@@ -51,7 +54,7 @@ const Products = () => {
                         </p>
 
 
-                        <button className='bg-gradient-to-r from-cyan-300 to-blue-600 text-white text-lg  py-2 px-4 mt-10 rounded hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500'>Add to Cart </button>
+                        <button onClick={() => addtocartHandler(product.id)} className='bg-gradient-to-r from-cyan-300 to-blue-600 text-white text-lg  py-2 px-4 mt-10 rounded hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500'>Add to Cart </button>
                     </div>
 
                 </div>

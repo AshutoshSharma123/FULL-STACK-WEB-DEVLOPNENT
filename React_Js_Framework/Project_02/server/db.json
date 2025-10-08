@@ -5,7 +5,8 @@
       "username": "111",
       "email": "111@gmail.com",
       "password": "12345",
-      "isAdmin": false
+      "isAdmin": false,
+      "cart": []
     }
   ],
   "products": [
