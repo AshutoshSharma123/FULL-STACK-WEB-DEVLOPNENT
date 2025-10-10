@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <div className='flex gap-4 mb-4 text-lg justify-center'>
             <NavLink to={'/'}>Home</NavLink>
-           
+
 
 
 
@@ -31,11 +31,14 @@ const Navbar = () => {
                 <>
                     <NavLink to={'/admin/create-product'}>Create Product</NavLink>
                     <NavLink to={'/admin/user-profile'}>Profile</NavLink>
+
+                    <NavLink to={'/cart'}>Cart</NavLink>
+
                     <button onClick={logoutHandler}>Logout</button>
                 </>
                 :
                 <>
-                    <NavLink to={'/login'}>Login</NavLink>
+                    <NavLink to ={'/login'}>Login</NavLink>
                 </>}
 
 

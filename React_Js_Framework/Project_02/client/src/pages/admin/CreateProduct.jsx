@@ -14,7 +14,7 @@ const CreateProduct = () => {
     const createProductHandler = (product) => {
         product.id = nanoid();
         dispatch(asynccreateProduct(product));
-        
+
     }
 
 
@@ -44,10 +44,7 @@ const CreateProduct = () => {
                 {...register('category', { required: true })}
                 type="text" placeholder='Category'
                 className='outline-none border-b p-2 text-xl' />
-            {/* <input
-                {...register('Description', { required: true })}
-                type="text" placeholder='Product Info'
-                className='outline-none border-b p-2 text-xl' /> */}
+
 
 
 

@@ -7,6 +7,14 @@
       "password": "12345",
       "isAdmin": true,
       "cart": []
+    },
+    {
+      "id": "adRMbfDAbNFKby168hxpC",
+      "username": "Ashutosh",
+      "email": "aashusharma375@gmail.com",
+      "password": "Ashutosh123@",
+      "isAdmin": false,
+      "cart": []
     }
   ],
   "products": [
@@ -49,6 +57,14 @@
       "image": "https://assets-jiocdn.ajio.com/medias/sys_master/root/20250520/lGgN/682c2ce57a6cd4182f3ee228/-473Wx593H-469755814-blackgrey-MODEL.jpg",
       "category": "Footwear",
       "description": "n love with the classic look of '80s basketball but have a thing for the fast-paced culture of today's game Meet the Nike Court Vision Low. A classic remixed with at least 20% recycled materials by weight, its crisp upper and stitched overlays keep the soul of the original style. The plush, low-cut collar keeps it sleek and comfortable for your world."
+    },
+    {
+      "id": "ShfzQkDTuVK-XyzCGnsPi",
+      "title": "Product by Ashutosh",
+      "price": "10000",
+      "image": "https://imgs.search.brave.com/rWZr9OI12qwxM-lF4hoN5s6M8e4Ct9vZ3Ev9XfAvFeY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3VsdG9mbWFjLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8xMC8yMDIxLU1h/Y0Jvb2stUHJvLTc4/MHg0NDAuanBlZw",
+      "category": "Technology",
+      "description": "The MacBook Pro is a line of business-oriented Mac laptop computers developed and manufactured by Apple. Introduced in 2006, it is the high-end sibling of the MacBook family, sitting above the ultra-portable MacBook Air and previously the low-end MacBook line. It is currently sold with 14-inch and 16-inch screens, all using Apple M-series chips. Before Apple silicon, the MacBook Pro used Intel chips, and was the first laptop made by Apple to do so, replacing the earlier PowerBook. It was also the first Apple laptop to carry the MacBook moniker."
     }
   ],
   "carts": []
