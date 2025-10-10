@@ -30,6 +30,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { asyncupdateUser } from '../store/actions/userActions';
 
+
 const Cart = () => {
     const user = useSelector((state) => state.userReducer.user);
     const products = useSelector((state) => state.productReducer.products);
@@ -42,9 +43,31 @@ const Cart = () => {
     const validCartItems = user.cart.filter(c => products.some(p => p.id === c.productId));
 
     const removeFromCart = (productId) => {
-        const updatedCart = user.cart.filter(c => c.productId !== productId);
+
+        // deletes whole list of overall quantity of that product from cart
+        // const updatedCart = user.cart.filter(c => c.productId !== productId);
+        // const updatedUser = { ...user, cart: updatedCart };
+        // dispatch(asyncupdateUser(user.id, updatedUser));
+
+        const updatedCart = user.cart
+            .map((item) => {
+                if (item.productId === productId) {
+                    if (item.quantity > 1) {
+                        // Reduce quantity by 1
+                        return { ...item, quantity: item.quantity - 1 };
+                    } else {
+                        // Quantity is 1, remove later
+                        return null;
+                    }
+                }
+                return item;
+            })
+            .filter(item => item !== null); // Remove items with null (quantity 1)
+
         const updatedUser = { ...user, cart: updatedCart };
         dispatch(asyncupdateUser(user.id, updatedUser));
+
+
     };
 
     return (
