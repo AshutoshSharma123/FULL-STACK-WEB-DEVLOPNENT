@@ -5,7 +5,7 @@
       "username": "111",
       "email": "111@gmail.com",
       "password": "12345",
-      "isAdmin": false,
+      "isAdmin": true,
       "cart": []
     }
   ],
@@ -41,6 +41,14 @@
       "image": "https://imgs.search.brave.com/bgax3vLDe5_0F32IEfpz9Deo9grCmtPJvCwABY3cHB8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5yb2xleC5jb20v/aW1hZ2UvdXBsb2Fk/L3FfYXV0bzplY28v/Zl9hdXRvL2NfbGlt/aXQsd18xOTIwL3Yx/NzI3MDg4Mjk3L3Jv/bGV4Y29tL2NvbGxl/Y3Rpb24vZmFtaWx5/LXBhZ2VzL3Byb2Zl/c3Npb25hbC13YXRj/aGVzL3N1Ym1hcmlu/ZXIvZmFtaWx5LXBh/Z2UvMjAyNC93YXRj/aC1zdWdnZXN0aW9u/cy9wcm9mZXNzaW9u/YWwtd2F0Y2hlcy1z/dWJtYXJpbmVyLXdh/dGNoLXN1Z2dlc3Rp/b25fMjQwOTA0X3Jv/bGV4X3N1Ym1hcmlu/ZXJfZDNfMzczMzAx/LTM3MzMwMi1iYXNl/X25ldF9vay00NDk1/OTM2ODVfY2FtMTdf/cHJfMDk0Ml9yZ2Jf/MDNfci5qcGc",
       "category": "Luxury",
       "description": "asnja s"
+    },
+    {
+      "id": "brETN0OCc_1yfy4LX42Sd",
+      "title": "Nike Air Force 2",
+      "price": "800000 INR",
+      "image": "https://assets-jiocdn.ajio.com/medias/sys_master/root/20250520/lGgN/682c2ce57a6cd4182f3ee228/-473Wx593H-469755814-blackgrey-MODEL.jpg",
+      "category": "Footwear",
+      "description": "n love with the classic look of '80s basketball but have a thing for the fast-paced culture of today's game Meet the Nike Court Vision Low. A classic remixed with at least 20% recycled materials by weight, its crisp upper and stitched overlays keep the soul of the original style. The plush, low-cut collar keeps it sleek and comfortable for your world."
     }
   ],
   "carts": []

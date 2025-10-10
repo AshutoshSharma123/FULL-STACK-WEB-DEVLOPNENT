@@ -7,18 +7,39 @@ const Products = () => {
     const products = useSelector((state) => state.productReducer.products);
 
 
+    // const addtocartHandler = (id) => {
+    //     const copyuser = { ...user };
+    //     const x = copyuser.cart.findIndex((c) => c.id === id);
+    //     console.log(x);
+    //     if (x == -1) {
+    //         copyuser.cart.push({ productId: id, quantity: 1 });
+
+    //     }
+    //     else copyuser.cart[x].quantity++;
+
+    //     console.log(user);
+
+    // }
+
     const addtocartHandler = (id) => {
-        const copyuser = { ...user };
-        const x = copyuser.cart.findIndex((c) => c.id === id);
-        console.log(x);
-        if (x == -1) {
+        // Deep copy the user object and cart array
+        const copyuser = {
+            ...user,
+            cart: [...(user.cart || [])], // clone the cart
+        };
+
+        const x = copyuser.cart.findIndex((c) => c.productId === id);
+
+        if (x === -1) {
             copyuser.cart.push({ productId: id, quantity: 1 });
-
+        } else {
+            copyuser.cart[x] = { ...copyuser.cart[x], quantity: copyuser.cart[x].quantity + 1 };
         }
-        else copyuser.cart[x].quantity++;
+
+        console.log(copyuser);
+    };
 
 
-    }
 
     if (!products || products.length === 0) return "Loading....";
 
