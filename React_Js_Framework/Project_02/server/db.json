@@ -13,8 +13,21 @@
       "username": "Ashutosh",
       "email": "aashusharma375@gmail.com",
       "password": "Ashutosh123@",
-      "isAdmin": false,
+      "isAdmin": true,
       "cart": []
+    },
+    {
+      "id": "nFiCVVRs1wXqZqBKMc747",
+      "username": "Aditya",
+      "email": "adis43524@gmail.com",
+      "password": "Aditya123@",
+      "isAdmin": false,
+      "cart": [
+        {
+          "productId": "M-gl7v8J_KJ27dtXxzayH",
+          "quantity": 1
+        }
+      ]
     }
   ],
   "products": [
@@ -25,14 +38,6 @@
       "image": "https://imgs.search.brave.com/jxl1ZqsouIrcqxvepAJaiEcM_v5xfahsu9s8r8syVsM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y25ldC5jb20vYS9p/bWcvcmVzaXplLzdm/NjgzYmM1OGYzMzgx/NmU4Y2Y4MGY0Njlm/YjdlNjEwMjcwODhh/YjkvaHViLzIwMjQv/MDkvMTMvMzZlNzYw/YmYtMmU5MC00MzEz/LTlkNDQtMmJlZTg2/MDgwM2U3L2lwaG9u/ZS0xNi1wbHVzLWlw/aG9uZS0xNi00NTM0/LmpwZz9hdXRvPXdl/YnAmZml0PWNyb3Am/aGVpZ2h0PTM2MiZ3/aWR0aD02NDQ",
       "category": "mobile",
       "description": "The iPhone 16 and iPhone 16 Plus are smartphones developed and marketed by Apple, representing the eighteenth-generation iPhones, succeeding the iPhone 15 and iPhone 15 Plus.\n They were announced during the Apple Event at Apple Park in Cupertino, California, on September 9, 2024, marking the first time an iPhone release was announced on a Monday.\n The devices were unveiled alongside the higher-priced iPhone 16 Pro and 16 Pro Max.\n The iPhone 16 is equipped with an aluminum design with a color-infused glass back, except for the white and black models, and features a vertical camera layout, a return to the design seen on the iPhone 11 and iPhone 12."
-    },
-    {
-      "id": "22sv1uoPngVVmQ6RXd43K",
-      "title": "Apple Watch 10",
-      "price": "40000",
-      "image": "https://imgs.search.brave.com/nYvrFko91_hnuERbSOyIHEOJeEfu5VwmCdhgtV6ISCs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NzUxMjUwNjk0OTQt/NmEwYzU4MTlkMzQw/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1UVjhmR0Z3/Y0d4bEpUSXdkMkYw/WTJnbE1qQnpaWEpw/WlhNbE1qQTFmR1Z1/ZkRCOGZEQjhmSHd3",
-      "category": "Watch",
-      "description": "Apple Watch is a brand of smartwatch products developed and marketed by Apple Inc., first released on April 24, 2015.\n It integrates fitness tracking, health-oriented capabilities, and wireless telecommunication, operating with watchOS and other Apple products and services.\n As of September 2025, new Apple Watches come with watchOS 26 preinstalled and require an iPhone running iOS 26, which is compatible with the iPhone 11 or later.\n The device is designed to work in conjunction with a paired iPhone for configuration and data syncing, but can also connect to Wi-Fi for data-reliant tasks, including communications and audio streaming.\n LTE-equipped models can perform these functions over a mobile network and make and receive phone calls independently when the iPhone is not nearby or powered off."
     },
     {
       "id": "W9sRDcJF3jYJL68Cef7IP",
@@ -56,7 +61,7 @@
       "price": "800000 INR",
       "image": "https://assets-jiocdn.ajio.com/medias/sys_master/root/20250520/lGgN/682c2ce57a6cd4182f3ee228/-473Wx593H-469755814-blackgrey-MODEL.jpg",
       "category": "Footwear",
-      "description": "n love with the classic look of '80s basketball but have a thing for the fast-paced culture of today's game Meet the Nike Court Vision Low. A classic remixed with at least 20% recycled materials by weight, its crisp upper and stitched overlays keep the soul of the original style. The plush, low-cut collar keeps it sleek and comfortable for your world."
+      "description": "In love with the classic look of '80s basketball but have a thing for the fast-paced culture of today's game Meet the Nike Court Vision Low. A classic remixed with at least 20% recycled materials by weight, its crisp upper and stitched overlays keep the soul of the original style. The plush, low-cut collar keeps it sleek and comfortable for your world."
     },
     {
       "id": "ShfzQkDTuVK-XyzCGnsPi",
@@ -65,6 +70,22 @@
       "image": "https://imgs.search.brave.com/rWZr9OI12qwxM-lF4hoN5s6M8e4Ct9vZ3Ev9XfAvFeY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3VsdG9mbWFjLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8xMC8yMDIxLU1h/Y0Jvb2stUHJvLTc4/MHg0NDAuanBlZw",
       "category": "Technology",
       "description": "The MacBook Pro is a line of business-oriented Mac laptop computers developed and manufactured by Apple. Introduced in 2006, it is the high-end sibling of the MacBook family, sitting above the ultra-portable MacBook Air and previously the low-end MacBook line. It is currently sold with 14-inch and 16-inch screens, all using Apple M-series chips. Before Apple silicon, the MacBook Pro used Intel chips, and was the first laptop made by Apple to do so, replacing the earlier PowerBook. It was also the first Apple laptop to carry the MacBook moniker."
+    },
+    {
+      "id": "WQ2S9iX2_7LRWW6MxmeJc",
+      "title": "Mouse",
+      "price": "600",
+      "image": "https://imgs.search.brave.com/vqZmbrFvVw2-0vbMXMbCud8ePIt_SnIVeiOPIV2TLKI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vdmFyaWFu/dHMvbzhTdlVKVXRS/WkJHWW5tZml3QW0x/ekZyLzYyNGYwZGMx/ZGZmOWJkY2NhYjAz/MmY5M2MzM2U3OWRl/Nzg0ODE3NzBlNzll/MjFkM2IwNDY5ZGFm/NTFmMDI3OTc",
+      "category": "Technology",
+      "description": "A wide selection of high-resolution images showcasing computer mice in various styles, colors, and contexts is available. These include realistic photos, transparent PNGs, and vector illustrations suitable for design and educational purposes."
+    },
+    {
+      "id": "9ErR40GAT8C8HcDQPYLOp",
+      "title": "Rayban Sunglasses",
+      "price": "8000",
+      "image": "https://imgs.search.brave.com/hxB73HQ3iD_gg7LeWTJJTyVlMzWgky_1aN9OeBdIc8E/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9vcHRv/cml1bS5pbi9jZG4v/c2hvcC9maWxlcy9S/YXliYW4tTWV0YS1X/YXlmYXJlci1SVzQw/MDYtNjAxLTcxLVN1/bmdsYXNzZXMtMDEu/anBnP3Y9MTc1Mjc1/NTM3NCZ3aWR0aD0x/MjAw",
+      "category": "Daily Essential",
+      "description": "Ray-Ban Meta glasses are a series of smart glasses developed by Meta Platforms in partnership with EssilorLuxottica, the parent company of Ray-Ban.\n The second generation of these glasses, released in October 2023, features improved 12 MP cameras, enhanced audio with open-ear speakers, a microphone array, a touchpad for controls, and integration with Meta AI.\n They are designed to be a component of Meta's broader vision for the metaverse and offer functionalities such as livestreaming to Facebook and Instagram, voice commands, and hands-free photo and video capture.\n\nThe glasses come in three models: Skyler, Wayfarer, and Headliner, and are available in various styles including Round, Wayfarer, and Meteor, with options for polarized, transitioning, blue-light filtering, and prescription lenses.\n They are compatible with both iOS and Android devices and connect via Bluetooth 5.0 and Wi-Fi 802.11ac.\n A dedicated Meta View app allows users to manage content, edit photos and videos, and share them across Meta platform"
     }
   ],
   "carts": []

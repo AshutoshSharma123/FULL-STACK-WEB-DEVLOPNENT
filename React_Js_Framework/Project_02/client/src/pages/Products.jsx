@@ -126,106 +126,243 @@
 
 
 
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { asyncupdateUser } from '../store/actions/userActions';
-import { HeartIcon } from '@heroicons/react/24/outline'; // Heroicons v2
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { Link } from 'react-router-dom';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { asyncupdateUser } from '../store/actions/userActions';
+// import { HeartIcon } from '@heroicons/react/24/outline'; // Heroicons v2
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+// const Products = () => {
+//     const user = useSelector((state) => state.userReducer.user);
+//     const products = useSelector((state) => state.productReducer.products);
+//     const dispatch = useDispatch();
+
+//     const addtocartHandler = (id) => {
+//         const copyuser = {
+//             ...user,
+//             cart: [...(user.cart || [])],
+//         };
+
+//         const x = copyuser.cart.findIndex((c) => c.productId === id);
+//         if (x === -1) {
+//             copyuser.cart.push({ productId: id, quantity: 1 });
+//         } else {
+//             copyuser.cart[x] = { ...copyuser.cart[x], quantity: copyuser.cart[x].quantity + 1 };
+//         }
+
+//         dispatch(asyncupdateUser(copyuser.id, copyuser));
+
+//         // Toast notification
+//         toast.success('Item added to cart!', {
+//             position: 'top-right',
+//             autoClose: 2000,
+//             hideProgressBar: false,
+//             closeOnClick: true,
+//             pauseOnHover: true,
+//             draggable: true,
+//         });
+//     };
+
+//     if (!products || products.length === 0) return "Loading...";
+
+//     return (
+//         <div className="w-full min-h-screen flex flex-wrap justify-center gap-8 py-10 px-6">
+//             {products.map((product) => (
+//                 <div
+//                     key={product.id}
+//                     className="w-[280px] sm:w-[300px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+//                 >
+//                     {/* Image */}
+//                     <div className="relative w-full h-48 overflow-hidden">
+//                         <img
+//                             src={product.image}
+//                             alt={product.title}
+//                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+//                         />
+//                         {/* Price tag */}
+//                         <span className="absolute top-2 left-2 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
+//                             ${product.price}
+//                         </span>
+
+//                     </div>
+
+//                     {/* Content */}
+//                     <div className="flex flex-col justify-between flex-grow p-4 space-y-3">
+//                         <div>
+//                             <h2 className="text-lg font-semibold text-gray-800 line-clamp-2">
+//                                 {product.title}
+//                             </h2>
+
+//                             {/* Category tag */}
+//                             <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full mt-1">
+//                                 {product.category}
+//                             </span>
+
+//                             <p className="text-sm text-gray-600 line-clamp-2 mt-2">
+//                                 {product.description.slice(0, 80)}...
+//                             </p>
+//                         </div>
+
+//                         {/* Actions */}
+//                         <div className="flex items-center justify-between mt-2">
+//                             <Link
+//                                 to={`/product/${product.id}`}
+//                                 className="text-sm text-blue-500 hover:underline"
+//                             >
+//                                 More details
+//                             </Link>
+//                         </div>
+
+//                         <button
+//                             onClick={() => addtocartHandler(product.id)}
+//                             className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium py-2 rounded-lg hover:from-cyan-500 hover:to-blue-700 transition-all"
+//                         >
+//                             Add to Cart
+//                         </button>
+//                     </div>
+//                 </div>
+//             ))}
+
+//             {/* Toast container */}
+//             <ToastContainer />
+//         </div>
+//     );
+// };
+
+// export default Products;
+
+
+
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { asyncupdateUser } from "../store/actions/userActions";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { HeartIcon } from "@heroicons/react/24/outline"; // Heroicons v2
+import { useEffect } from "react";
 
 const Products = () => {
     const user = useSelector((state) => state.userReducer.user);
     const products = useSelector((state) => state.productReducer.products);
     const dispatch = useDispatch();
 
-    const addtocartHandler = (id) => {
-        const copyuser = {
-            ...user,
-            cart: [...(user.cart || [])],
-        };
+    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredProducts, setFilteredProducts] = useState(products || []);
 
-        const x = copyuser.cart.findIndex((c) => c.productId === id);
-        if (x === -1) {
+    // Update filtered products whenever products list changes
+    useEffect(() => {
+        setFilteredProducts(products);
+    }, [products]);
+
+
+    // Search handler
+    const handleSearch = (e) => {
+        const query = e.target.value.toLowerCase();
+        setSearchQuery(query);
+
+        const result = products.filter(
+            (product) =>
+                product.title.toLowerCase().includes(query) ||
+                product.category.toLowerCase().includes(query) ||
+                product.description.toLowerCase().includes(query)
+        );
+
+        setFilteredProducts(result);
+    };
+
+    // Add to cart handler
+    const addtocartHandler = (id) => {
+        if (!user) return toast.error("Please login first!");
+
+        const copyuser = { ...user, cart: [...(user.cart || [])] };
+        const idx = copyuser.cart.findIndex((c) => c.productId === id);
+
+        if (idx === -1) {
             copyuser.cart.push({ productId: id, quantity: 1 });
         } else {
-            copyuser.cart[x] = { ...copyuser.cart[x], quantity: copyuser.cart[x].quantity + 1 };
+            copyuser.cart[idx] = {
+                ...copyuser.cart[idx],
+                quantity: copyuser.cart[idx].quantity + 1,
+            };
         }
 
         dispatch(asyncupdateUser(copyuser.id, copyuser));
-
-        // Toast notification
-        toast.success('Item added to cart!', {
-            position: 'top-right',
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-        });
+        toast.success("Item added to cart!");
     };
 
     if (!products || products.length === 0) return "Loading...";
 
     return (
-        <div className="w-full min-h-screen bg-gray-800 flex flex-wrap justify-center gap-8 py-10 px-6">
-            {products.map((product) => (
-                <div
-                    key={product.id}
-                    className="w-[280px] sm:w-[300px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                >
-                    {/* Image */}
-                    <div className="relative w-full h-48 overflow-hidden">
-                        <img
-                            src={product.image}
-                            alt={product.title}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                        />
-                        {/* Price tag */}
-                        <span className="absolute top-2 left-2 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            ${product.price}
-                        </span>
+        <div className="w-full min-h-screen bg-gray-900 flex flex-col items-center py-10 px-6">
+            {/* Search bar */}
+            <input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={handleSearch}
+                className="w-full max-w-md p-3 mb-8 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            />
 
-                    </div>
+            {/* Products Grid */}
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-                    {/* Content */}
-                    <div className="flex flex-col justify-between flex-grow p-4 space-y-3">
-                        <div>
-                            <h2 className="text-lg font-semibold text-gray-800 line-clamp-2">
-                                {product.title}
-                            </h2>
 
-                            {/* Category tag */}
-                            <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full mt-1">
-                                {product.category}
+
+
+                {filteredProducts.map((product) => (
+                    <div
+                        key={product.id}
+                        className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    >
+                        {/* Image */}
+                        <div className="relative w-full h-48 overflow-hidden">
+                            <img
+                                src={product.image}
+                                alt={product.title}
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            />
+                            <span className="absolute top-2 left-2 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                ${product.price}
                             </span>
 
-                            <p className="text-sm text-gray-600 line-clamp-2 mt-2">
-                                {product.description.slice(0, 80)}...
-                            </p>
                         </div>
 
-                        {/* Actions */}
-                        <div className="flex items-center justify-between mt-2">
-                            <Link
-                                to={`/product/${product.id}`}
-                                className="text-sm text-blue-500 hover:underline"
+                        {/* Content */}
+                        <div className="flex flex-col justify-between flex-grow p-4 space-y-3">
+                            <div>
+                                <h2 className="text-lg font-semibold text-white line-clamp-2">
+                                    {product.title}
+                                </h2>
+                                <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full mt-1">
+                                    {product.category}
+                                </span>
+                                <p className="text-sm text-gray-400 line-clamp-2 mt-2">
+                                    {product.description.slice(0, 80)}...
+                                </p>
+                            </div>
+
+                            {/* Actions */}
+                            <div className="flex items-center justify-between mt-2">
+                                <Link
+                                    to={`/product/${product.id}`}
+                                    className="text-sm text-cyan-400 hover:underline"
+                                >
+                                    More details
+                                </Link>
+                            </div>
+
+                            <button
+                                onClick={() => addtocartHandler(product.id)}
+                                className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium py-2 rounded-lg hover:from-cyan-500 hover:to-blue-700 transition-all"
                             >
-                                More details
-                            </Link>
+                                Add to Cart
+                            </button>
                         </div>
-
-                        <button
-                            onClick={() => addtocartHandler(product.id)}
-                            className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium py-2 rounded-lg hover:from-cyan-500 hover:to-blue-700 transition-all"
-                        >
-                            Add to Cart
-                        </button>
                     </div>
-                </div>
-            ))}
-
-            {/* Toast container */}
-            <ToastContainer />
+                ))}
+            </div>
         </div>
     );
 };
