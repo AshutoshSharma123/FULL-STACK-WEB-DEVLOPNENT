@@ -4,303 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      height: 100%;
-      width: 100%;
-    }
-
-    .bg-text-image {
-      background-image: url('assets/assets/bg-text.jpg');
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/tsanak/autotyping/dist/autotyping.min.js"></script>
-<script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
-<script>
-  // Initialize Lenis
-  const lenis = new Lenis();
-
-  // Use requestAnimationFrame to continuously update the scroll
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-
-</script>
+  <title>Minimal Futuristic GitHub UI</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body
+  class="bg-gradient-to-br from-gray-950 via-black to-gray-900 text-gray-200 min-h-screen font-inter flex items-center justify-center p-6">
 
-  <main class="w-full py-4 bg-gray-200 font-mono  justify-center">
-    <nav class="flex px-[1rem] justify-between items-center sm:px-[5rem] sm:justify-around">
-      <h1 class="sm:font-bold hidden sm:block">My Portfolio</h1>
-      <div class="links gap-6 font-bold flex">
+  <!-- Glass Card Container -->
+  <div
+    class="max-w-5xl w-full bg-gray-900/40 backdrop-blur-md border border-gray-800 rounded-2xl shadow-xl p-12 space-y-12">
 
-        <a href="#home" onclick="scrollToSection(event, 'home')"
-          class="opacity-45 hover:opacity-100 hover:scale-110  hover:text-blue-500 transition duration-300">Home</a>
-        <a href="#about" onclick="scrollToSection(event, 'about')"
-          class="opacity-45 hover:opacity-100 hover:scale-110 hover:text-blue-500 transition duration-300">About</a>
-        <a href="#work" onclick="scrollToSection(event, 'work')"
-          class="opacity-45 hover:opacity-100hover:scale-110  hover:text-blue-500 transition duration-300">Work</a>
-        <a href="#contact" onclick="scrollToSection(event, 'contact')"
-          class="opacity-45 hover:opacity-100 hover:scale-110 hover:text-blue-500 transition duration-300">Contact</a>
-      </div>
-    </nav>
-
-    <section id="home">
-      <div class="auto">
-        <h1 class="text-4xl px-5 mt-5 sm:px-[5rem] sm:text-4xl">Hi,this is</h1>
-
-        <h2
-          class="bg-text-image text-6xl tracking-[-6px] px-5 -ml-[3] -mt-3 font-bold bg-gradient-to-r bg-clip-text text-transparent py-0  sm:px-[5rem] sm:text-8xl">
-          Ashutosh
-        </h2>
-      </div>
-
-
-      <div class="w-full flex justify-center align-center">
-        <div
-          class="rightheadings flex justify-between gap-1 tracking-tighter px-[0rem] mt-5 font-medium items-center sm:flex sm:flex-wrap sm:w-2/3 sm:justify-center sm:text-2xl ">
-          <h4>
-            <span class="timing w-[4rem]" aria-label="Current time">[--:--]</span>
-          </h4>
-          <div class="w-32 h-0.5 mt-1 bg-black"></div>
-          <h3 class="text-2.0xl tracking-tighter ml-2 flex justify-end font-bold"> Frontend Developer</h3>
-        </div>
-      </div>
-    </section>
-    <section
-      class="w-full px-[1rem] aspect-[16/9] sm:mt-[-6%] sm:mb-[-6%]  sm:p-2 sm:flex sm:items-center sm:justify-center ">
-      <img class="w-full h-full object-cover sm:w-7/10 sm:h-7/10" src="assets/assets/My_Image_2.png" alt="My">
-    </section>
-
-    <section id="about"
-      class="w-full px-[1rem]  mt-5 flex-col z-10 sm:flex items-center flex-col  justify-center mb-[10%] align-center">
-
-      <img class="hidden sm:block sm:w-[5rem] absolute mr-[50rem] h-[5rem] mt-[-10]" src="assets/assets/image 222.png"
-        alt="">
-      <img class="hidden sm:block absolute mt-[-10] ml-[95%] sm:w-[5rem] absolute mr-[20rem] h-[5rem]"
-        src="assets/assets/image 223.png" alt="">
-      <img class="hidden sm:block absolute mt-[20%] ml-[65%] sm:w-[5rem] absolute mr-[30rem] h-[5rem]"
-        src="assets/assets/image 224.png" alt="">
-      <img class="hidden sm:block absolute mt-[18%] ml-[8%] sm:w-[5rem] absolute mr-[30rem] h-[5rem]"
-        src="assets/assets/image 225.png" alt="">
-
-      <h6 class="font-bold flex w-full text-[1.4rem] tracking-[-2px] justify-center sm:text-4xl">{I BUILD DESIGN &
-        EXPERIENCES}</h6>
-
-      <p
-        class="w-full px-0 tracking-tighter text-center leading-[-2] font-medium sm:leading-[1] sm:text-2xl sm:font-medium flex flex-col items-center sm:tracking-[-1px] sm:w-4/6">
-        Frontend Developer skilled in React, JavaScript, and Tailwind CSS. Leverages AI and prompt engineering to
-        deliver
-        responsive, visually engaging, and efficient web solutions with strong problem-solving expertise.
-        <a href="assets/assets/Ashutosh_Sharma_3.pdf" download
-          class="px-4 py-2 w-2/5  mt-4 bg-blue-500 text-white rounded hover:transition hover:duration-300 hover:bg-blue-600 hover:scale-105">
-          My Resume
-        </a>
-      </p>
-
-
-      </div>
-    </section>
-
-
-
-    <section class="bg-white flex flex-col sm:mt-[0vh]  items-center justify-center w-full  relative px-[2rem] ">
-      <img src="assets/assets/bgdots.png" class="w-full sm:h-[20vw] h-[40vw]" alt="">
-      <div class="overlaytext w-full absolute sm:top-[2/5] top-10 left-1/2 transform -translate-x-1/2 translate-y-1">
-        <h1 class="text-2xl text-center font-light tracking-tighter sm:text-4xl sm:font-bold">Technologies I work with
-        </h1>
-        <img src="assets/assets/Untitled design.png" alt="Technologies"
-          class="w-3/4 object-cover mt-[-4rem] w-1/2 sm:w-2/5  mx-auto">
-      </div>
-    </section>
-
-    <section class="projects-section w-full mt-10 px-4 md:px-8">
-      <div class="text-center mb-10">
-        <h1 class="font-bold text-4xl sm:text-5xl tracking-tight">My Projects</h1>
-      </div>
-
-      <div class="projects grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Project Card -->
-        <div
-          class="w-full bg-white rounded-2xl shadow-md overflow-hidden relative transition transform hover:scale-105 hover:shadow-xl duration-300 flex flex-col h-full">
-          <div class="h-36 w-full overflow-hidden">
-            <img src="assets/assets/P1.png" alt="Github Searcher" class="w-full h-full object-cover">
-          </div>
-          <div class="p-4 flex flex-col justify-between flex-1">
-            <div>
-              <h2 class="text-lg font-semibold text-gray-900">Github Searcher</h2>
-              <p class="text-sm text-gray-600 mt-1">A Github profile searcher web app using API and async JavaScript.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
-                <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">API</span>
-                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded-full">Web App</span>
-              </div>
-            </div>
-            <a href="https://ashutoshsharma123.github.io/FULL-STACK-WEB-DEVLOPNENT/Projects/Github_searcher/index.html"
-              target="_blank"
-              class="mt-4 bg-blue-600 text-white text-sm font-medium w-full py-2 rounded-full text-center hover:bg-blue-700 transition duration-200">
-              Check Out
-            </a>
-          </div>
-        </div>
-
-        <!-- Portfolio Card -->
-        <div
-          class="w-full bg-white rounded-2xl shadow-md overflow-hidden relative transition transform hover:scale-105 hover:shadow-xl duration-300 flex flex-col h-full">
-          <div class="h-36 w-full overflow-hidden">
-            <img src="assets/assets/P2.png" alt="Portfolio" class="w-full h-full object-cover">
-          </div>
-          <div class="p-4 flex flex-col justify-between flex-1">
-            <div>
-              <h2 class="text-lg font-semibold text-gray-900">My Portfolio</h2>
-              <p class="text-sm text-gray-600 mt-1">Portfolio website using HTML, CSS, JS and Tailwind CSS, leveraging
-                Flexbox with prompt engineering.</p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
-                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Tailwind</span>
-              </div>
-            </div>
-            <a href="#home" onclick="scrollToSection(event, 'home')"
-              class="mt-4 bg-blue-600 text-white text-sm font-medium w-full py-2 rounded-full text-center hover:bg-blue-700 transition duration-200">
-              Check Out
-            </a>
-          </div>
-        </div>
-
-        <!-- FoodHub Card -->
-        <div
-          class="w-full bg-white rounded-2xl shadow-md overflow-hidden relative transition transform hover:scale-105 hover:shadow-xl duration-300 flex flex-col h-full">
-          <div class="h-36 w-full overflow-hidden">
-            <img src="assets/assets/P3.png" alt="FoodHub" class="w-full h-full object-cover">
-          </div>
-          <div class="p-4 flex flex-col justify-between flex-1">
-            <div>
-              <h2 class="text-lg font-semibold text-gray-900">Recipe Website (FoodHub)</h2>
-              <p class="text-sm text-gray-600 mt-1">Responsive recipe management app with React, TailwindCSS, Context
-                API,
-                React Hook Form, and Axios interceptors.</p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">React</span>
-                <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Tailwind</span>
-                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded-full">Axios</span>
-              </div>
-            </div>
-            <a href="https://ashutoshsharma123.github.io/FoodHub/" target="_blank"
-              class="mt-4 bg-blue-600 text-white text-sm font-medium w-full py-2 rounded-full text-center hover:bg-blue-700 transition duration-200">
-              Check Out
-            </a>
-          </div>
-        </div>
-
-        <!-- Heart Disease Predictor Card -->
-        <div
-          class="w-full bg-white rounded-2xl shadow-md overflow-hidden relative transition transform hover:scale-105 hover:shadow-xl duration-300 flex flex-col h-full">
-          <div class="h-36 w-full overflow-hidden">
-            <img src="assets/assets/P4.png" alt="Heart Disease Predictor" class="w-full h-full object-cover">
-          </div>
-          <div class="p-4 flex flex-col justify-between flex-1">
-            <div>
-              <h2 class="text-lg font-semibold text-gray-900">Heart Disease Predictor</h2>
-              <p class="text-sm text-gray-600 mt-1">Web app built with React, Vite, TailwindCSS & ML algorithms to
-                predict
-                heart disease likelihood with a user-friendly interface.</p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span class="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">Flask</span>
-                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2 py-1 rounded-full">ML</span>
-                <span
-                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">Tailwind</span><span
-                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">Python</span>
-
-              </div>
-            </div>
-            <a href="https://heart-prediction-web.onrender.com/" target="_blank"
-              class="mt-4 bg-blue-600 text-white text-sm font-medium w-full py-2 rounded-full text-center hover:bg-blue-700 transition duration-200">
-              Check Out
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-
-
-    <section id="contact"
-      class="footer bg-white w-full flex flex-col sm:flex-row justify-between items-center px-8 py-6 gap-4">
-
-      <!-- Email -->
-      <h1 class="font-bold text-gray-900 text-center sm:text-left">
-        <a href="mailto:aashusharma475@gmail.com" class="hover:text-blue-600 transition">
-          Email me <i class="fa fa-envelope w-4 ml-1"></i>
-        </a>
+    <!-- Header / Search -->
+    <header class="flex flex-col md:flex-row justify-between items-center gap-8">
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-cyan-400">
+        GitHub Explorer
       </h1>
-
-      <!-- Social Links -->
-      <div class="flex gap-4">
-        <a href="https://www.instagram.com/aashu3380" target="_blank"
-          class="hover:text-pink-500 transition-colors">Instagram</a>
-        <a href="https://www.linkedin.com/in/ashutosh-sharma-879a21220/" target="_blank"
-          class="hover:text-blue-500 transition-colors">LinkedIn</a>
-        <a href="https://github.com/AshutoshSharma123" target="_blank"
-          class="hover:text-gray-700 transition-colors">GitHub</a>
+      <div class="flex flex:col gap-3 w-full md:w-auto">
+        <input id="usernameInp" type="text" placeholder="Search username..."
+          class="flex-1 md:w-80 px-5 py-3 rounded-lg bg-gray-800/60 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+        <button id="searchBtn"
+          class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-white font-medium transition">
+          Search
+        </button>
       </div>
+    </header>
 
-      <!-- Copyright -->
-      <p class="text-gray-500 text-sm text-center sm:text-right">
-        <i class="fa fa-copyright" aria-hidden="true"></i> All rights Reserved 2025
-      </p>
+    <!-- Profile Card (Skeleton Loader) -->
+    <section id="profile"
+      class="flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left px-4 md:px-6">
 
-      <!-- Date & Time -->
-      <h4 class="font-light tracking-tighter text-gray-400 text-sm text-center sm:text-right">
-        <span>Time: <span class="timing" aria-label="Current time"></span></span> |
-        <span>Date: <span class="date" aria-label="Current date"></span></span>
-      </h4>
+
     </section>
 
-  </main>
+    <!-- Repositories (Skeleton Loader) -->
+    <section>
+      <h3 class="text-xl font-medium mb-6 text-cyan-400">Repositories</h3>
+      <div id="repos" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
 
-  <script>
+        <!-- Repo Card Placeholder -->
+
+      </div>
+    </section>
+
+  </div>
 
 
-
-
-
-    var dt = new Date();
-    var str = dt.getHours() % 12 + ":" + dt.getMinutes() + " " + (dt.getHours() >= 12 ? "PM" : "AM");
-    var str_2 = dt.getDate() + "|" + dt.getMonth() + "|" + dt.getFullYear();
-
-    document.querySelector('.timing').textContent = "[" + str + "]";
-    document.querySelector('.date').textContent += " " + str_2;
-
-    function scrollToSection(event, id) {
-      event.preventDefault(); // stop default anchor jump
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
