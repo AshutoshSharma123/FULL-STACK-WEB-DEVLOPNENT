@@ -40,8 +40,8 @@
 <body>
 
   <main class="w-full py-4 bg-gray-200 font-mono  justify-center">
-    <h1 class="sm:font-bold hidden sm:block">My Portfolio</h1>
-    <!-- <nav class="flex px-[1rem] justify-between items-center sm:px-[5rem] sm:justify-around">
+    <nav class="flex px-[1rem] justify-center items-center sm:px-[5rem] sm:justify-around">
+      <h1 class="sm:font-bold hidden px-3 sm:block">My Portfolio</h1>
 
       <div class="links gap-6 font-bold flex">
 
@@ -54,36 +54,9 @@
         <a href="#contact" onclick="scrollToSection(event, 'contact')"
           class="opacity-45 hover:opacity-100 hover:scale-110 hover:text-blue-500 transition duration-300">Contact</a>
       </div>
-    </nav> -->
-    <!-- ✅ Navbar -->
-    <nav class="w-full fixed top-0 left-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
-      <div class="flex justify-between items-center px-6 py-4 sm:px-[5rem]">
-        <!-- Logo -->
-        <div class="text-xl font-bold tracking-tight">
-          <a href="#home" class="text-blue-500 hover:text-blue-600">My Portfolio</a>
-        </div>
-
-        <!-- Burger Menu -->
-        <button id="menu-btn" class="sm:hidden flex flex-col space-y-1.5 focus:outline-none">
-          <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-          <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-          <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-        </button>
-
-        <!-- Nav Links -->
-        <div id="menu"
-          class="absolute top-full left-0 w-full bg-white flex flex-col items-center gap-6 py-6 text-lg font-bold transition-all duration-500 ease-in-out transform -translate-y-full opacity-0 sm:opacity-100 sm:translate-y-0 sm:static sm:flex sm:flex-row sm:gap-8 sm:py-0 sm:w-auto sm:bg-transparent">
-          <a href="#home" onclick="scrollToSection(event, 'home')"
-            class="opacity-60 hover:opacity-100 hover:scale-110 hover:text-blue-500 transition duration-300">Home</a>
-          <a href="#about" onclick="scrollToSection(event, 'about')"
-            class="opacity-60 hover:opacity-100 hover:scale-110 hover:text-blue-500 transition duration-300">About</a>
-          <a href="#work" onclick="scrollToSection(event, 'work')"
-            class="opacity-60 hover:opacity-100 hover:scale-110 hover:text-blue-500 transition duration-300">Work</a>
-          <a href="#contact" onclick="scrollToSection(event, 'contact')"
-            class="opacity-60 hover:opacity-100 hover:scale-110 hover:text-blue-500 transition duration-300">Contact</a>
-        </div>
-      </div>
     </nav>
+
+
     <section id="home">
       <div class="auto">
         <h1 class="text-4xl px-5 mt-5 sm:px-[5rem] sm:text-4xl">Hi,this is</h1>
@@ -257,63 +230,46 @@
           </div>
 
         </div>
-        <section id="contact"
-          class="footer bg-white w-full flex flex-col sm:flex-row justify-between items-center px-8 py-6 gap-4">
 
-          <!-- Email -->
-          <h1 class="font-bold text-gray-900 text-center sm:text-left">
-            <a href="mailto:aashusharma475@gmail.com" class="hover:text-blue-600 transition">
-              Email me <i class="fa fa-envelope w-4 ml-1"></i>
-            </a>
-          </h1>
 
-          <!-- Social Links -->
-          <div class="flex gap-4">
-            <a href="https://www.instagram.com/aashu3380" target="_blank"
-              class="hover:text-pink-500 transition-colors">Instagram</a>
-            <a href="https://www.linkedin.com/in/ashutosh-sharma-879a21220/" target="_blank"
-              class="hover:text-blue-500 transition-colors">LinkedIn</a>
-            <a href="https://github.com/AshutoshSharma123" target="_blank"
-              class="hover:text-gray-700 transition-colors">GitHub</a>
-          </div>
+        <footer class="bg-white w-full mt-auto border-t border-gray-200">
+          <section id="contact"
+            class="footer w-full flex flex-col sm:flex-row justify-between items-center px-8 py-6 gap-4">
 
-          <!-- Copyright -->
-          <p class="text-gray-500 text-sm text-center sm:text-right">
-            <i class="fa fa-copyright" aria-hidden="true"></i> All rights Reserved 2025
-          </p>
+            <!-- Email -->
+            <h1 class="font-bold text-gray-900 text-center sm:text-left">
+              <a href="mailto:aashusharma475@gmail.com" class="hover:text-blue-600 transition">
+                Email me <i class="fa fa-envelope w-4 ml-1"></i>
+              </a>
+            </h1>
 
-          <!-- Date & Time -->
-          <h4 class="font-light tracking-tighter text-gray-400 text-sm text-center sm:text-right">
-            <span>Time: <span class="timing" aria-label="Current time"></span></span> |
-            <span>Date: <span class="date" aria-label="Current date"></span></span>
-          </h4>
-        </section>
+            <!-- Social Links -->
+            <div class="flex gap-4">
+              <a href="https://www.instagram.com/aashu3380" target="_blank"
+                class="hover:text-pink-500 transition-colors">Instagram</a>
+              <a href="https://www.linkedin.com/in/ashutosh-sharma-879a21220/" target="_blank"
+                class="hover:text-blue-500 transition-colors">LinkedIn</a>
+              <a href="https://github.com/AshutoshSharma123" target="_blank"
+                class="hover:text-gray-700 transition-colors">GitHub</a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-gray-500 text-sm text-center sm:text-right">
+              <i class="fa fa-copyright" aria-hidden="true"></i> All rights Reserved 2025
+            </p>
+
+            <!-- Date & Time -->
+            <h4 class="font-light tracking-tighter text-gray-400 text-sm text-center sm:text-right">
+              <span>Time: <span class="timing" aria-label="Current time"></span></span> |
+              <span>Date: <span class="date" aria-label="Current date"></span></span>
+            </h4>
+          </section>
+        </footer>
 
   </main>
 
   <script>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuBtn = document.getElementById("menu-btn");
-      const menu = document.getElementById("menu");
-      let menuOpen = false;
-
-      menuBtn.addEventListener("click", () => {
-        menuOpen = !menuOpen;
-
-        menu.classList.toggle("-translate-y-full", !menuOpen);
-        menu.classList.toggle("opacity-0", !menuOpen);
-        menu.classList.toggle("translate-y-0", menuOpen);
-        menu.classList.toggle("opacity-100", menuOpen);
-
-        const spans = menuBtn.querySelectorAll("span");
-        spans[0].classList.toggle("rotate-45", menuOpen);
-        spans[0].classList.toggle("translate-y-[7px]", menuOpen);
-        spans[1].classList.toggle("opacity-0", menuOpen);
-        spans[2].classList.toggle("-rotate-45", menuOpen);
-        spans[2].classList.toggle("-translate-y-[7px]", menuOpen);
-      });
-    });
 
     function scrollToSection(event, id) {
       event.preventDefault();
