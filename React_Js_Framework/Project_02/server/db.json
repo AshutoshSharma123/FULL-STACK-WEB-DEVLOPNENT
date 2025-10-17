@@ -14,7 +14,16 @@
       "email": "aashusharma375@gmail.com",
       "password": "Ashutosh123@",
       "isAdmin": true,
-      "cart": []
+      "cart": [
+        {
+          "productId": "W9sRDcJF3jYJL68Cef7IP",
+          "quantity": 2
+        },
+        {
+          "productId": "M-gl7v8J_KJ27dtXxzayH",
+          "quantity": 3
+        }
+      ]
     },
     {
       "id": "nFiCVVRs1wXqZqBKMc747",
@@ -22,12 +31,7 @@
       "email": "adis43524@gmail.com",
       "password": "Aditya123@",
       "isAdmin": false,
-      "cart": [
-        {
-          "productId": "M-gl7v8J_KJ27dtXxzayH",
-          "quantity": 1
-        }
-      ]
+      "cart": []
     }
   ],
   "products": [
@@ -86,6 +90,14 @@
       "image": "https://imgs.search.brave.com/hxB73HQ3iD_gg7LeWTJJTyVlMzWgky_1aN9OeBdIc8E/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9vcHRv/cml1bS5pbi9jZG4v/c2hvcC9maWxlcy9S/YXliYW4tTWV0YS1X/YXlmYXJlci1SVzQw/MDYtNjAxLTcxLVN1/bmdsYXNzZXMtMDEu/anBnP3Y9MTc1Mjc1/NTM3NCZ3aWR0aD0x/MjAw",
       "category": "Daily Essential",
       "description": "Ray-Ban Meta glasses are a series of smart glasses developed by Meta Platforms in partnership with EssilorLuxottica, the parent company of Ray-Ban.\n The second generation of these glasses, released in October 2023, features improved 12 MP cameras, enhanced audio with open-ear speakers, a microphone array, a touchpad for controls, and integration with Meta AI.\n They are designed to be a component of Meta's broader vision for the metaverse and offer functionalities such as livestreaming to Facebook and Instagram, voice commands, and hands-free photo and video capture.\n\nThe glasses come in three models: Skyler, Wayfarer, and Headliner, and are available in various styles including Round, Wayfarer, and Meteor, with options for polarized, transitioning, blue-light filtering, and prescription lenses.\n They are compatible with both iOS and Android devices and connect via Bluetooth 5.0 and Wi-Fi 802.11ac.\n A dedicated Meta View app allows users to manage content, edit photos and videos, and share them across Meta platform"
+    },
+    {
+      "id": "SaI1VpkrpIzg45PU_IfHR",
+      "title": "Harley Davidson",
+      "price": "500,000",
+      "image": "https://imgs.search.brave.com/gSBs417ivDOXbv-sNOyFDj4TtOzFRmPb_aOqqUjicwA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTY1/NjI1OTc0L3Bob3Rv/L2tlbm9zaGEtd2kt/aGFybGV5LWRhdmlk/c29uLW1vdG9yY3lj/bGVzLWFyZS1vZmZl/cmVkLWZvci1zYWxl/LWF0LXRoZS11a2Vz/LWhhcmxleS1kYXZp/ZHNvbi5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9ZVVodHI2/NXFPUXB2Y3o5WFRC/UC1mWWNzVUFMT0o3/TWdRTHRIZVlRNERo/RT0",
+      "category": "Automobile",
+      "description": "Harley-Davidson, Inc. is an iconic American motorcycle manufacturer founded in 1903 in Milwaukee, Wisconsin. It is one of the oldest and most recognized motorcycle brands globally, known for its heavyweight cruisers, distinctive engine sound, and strong cultural following.\n\nThe company is publicly traded on the NYSE under the ticker HOG and is a component of the S&P 400. As of 2023, Harley-Davidson reported $5.84 billion in revenue, produced 162,771 motorcycles, and employed approximately 6,400 people worldwide."
     }
   ],
   "carts": []

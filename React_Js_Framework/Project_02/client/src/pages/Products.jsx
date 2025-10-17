@@ -1,263 +1,48 @@
-
-// import { Link } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
-// import { asyncupdateUser } from '../store/actions/userActions';
-
-// const Products = () => {
-//     const user = useSelector((state) => state.userReducer.user);
-//     const products = useSelector((state) => state.productReducer.products);
-//     const dispatch = useDispatch();
-
-
-
-//     const addtocartHandler = (id) => {
-//         // Deep copy the user object and cart array
-//         const copyuser = {
-//             ...user,
-//             cart: [...(user.cart || [])], // clone the cart
-//         };
-
-//         const x = copyuser.cart.findIndex((c) => c.productId === id);
-
-//         if (x === -1) {
-//             copyuser.cart.push({ productId: id, quantity: 1 });
-//         } else {
-//             copyuser.cart[x] = { ...copyuser.cart[x], quantity: copyuser.cart[x].quantity + 1 };
-//         }
-
-//         console.log(copyuser);
-//         dispatch(asyncupdateUser(copyuser.id, copyuser));
-//     };
-
-//     if (!products || products.length === 0) return "Loading....";
-
-//     return (
-//         // <div className="w-full min-h-screen flex flex-wrap justify-center gap-6 px-4">
-//         //     {products.map((product) => (
-//         //         <div
-//         //             key={product.id}
-//         //             className="w-4/5 sm:w-1/2 md:w-1/3 lg:w-1/4 h-1/4 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
-//         //         >
-//         //             {/* Image */}
-//         //             <div className="w-full aspect-[4/3] overflow-hidden">
-//         //                 <img
-//         //                     src={product.image}
-//         //                     alt={product.title}
-//         //                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-//         //                 />
-//         //             </div>
-
-//         //             {/* Content */}
-//         //             <div className="p-4 sm:p-6 space-y-2">
-//         //                 <h2 className="text-base sm:text-lg font-bold text-gray-800 line-clamp-2">
-//         //                     {product.title}
-//         //                 </h2>
-//         //                 <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
-//         //                     {product.description.slice(0, 100)}...
-//         //                 </p>    <Link className="p-4 text-blue-600 text-center" to={`/product/${product.id}`}>more details</Link>
-
-
-
-//         //                 <p className="text-lg sm:text-xl font-bold text-yellow-600">
-//         //                     ${product.price}
-//         //                 </p>
-
-
-//         //                 <button onClick={() => addtocartHandler(product.id)} className='bg-gradient-to-r from-cyan-300 to-blue-600 text-white text-lg  py-2 px-4 mt-10 rounded hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500'>Add to Cart </button>
-//         //             </div>
-
-//         //         </div>
-//         //     ))}
-//         // </div>
-
-
-//         <div className="w-full min-h-screen bg-gray-800 flex flex-wrap justify-center gap-8 py-10 px-6">
-//             {products.map((product) => (
-//                 <div
-//                     key={product.id}
-//                     className="w-[280px] sm:w-[300px] bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-//                 >
-//                     {/* Image */}
-//                     <div className="w-full h-48 overflow-hidden">
-//                         <img
-//                             src={product.image}
-//                             alt={product.title}
-//                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-//                         />
-//                     </div>
-
-//                     {/* Content */}
-//                     <div className="flex flex-col justify-between flex-grow p-4 space-y-3">
-//                         <div>
-//                             <h2 className="text-lg font-semibold text-gray-800 line-clamp-2">
-//                                 {product.title}
-//                             </h2>
-//                             <p className="text-sm text-gray-600 line-clamp-2">
-//                                 {product.description.slice(0, 80)}...
-//                             </p>
-//                         </div>
-
-//                         <div className="flex items-center justify-between mt-2">
-//                             <p className="text-lg font-bold text-yellow-600">${product.price}</p>
-//                             <Link
-//                                 to={`/product/${product.id}`}
-//                                 className="text-sm text-blue-500 hover:underline"
-//                             >
-//                                 More details
-//                             </Link>
-//                         </div>
-
-//                         <button
-//                             onClick={() => addtocartHandler(product.id)}
-//                             className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium py-2 mt-2 rounded-lg hover:from-cyan-500 hover:to-blue-700 transition-all"
-//                         >
-//                             Add to Cart
-//                         </button>
-//                     </div>
-//                 </div>
-//             ))}
-//         </div>
-
-//     );
-// };
-
-// export default Products;
-
-
-
-// import { Link } from 'react-router-dom';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { asyncupdateUser } from '../store/actions/userActions';
-// import { HeartIcon } from '@heroicons/react/24/outline'; // Heroicons v2
-// import { toast, ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
-// const Products = () => {
-//     const user = useSelector((state) => state.userReducer.user);
-//     const products = useSelector((state) => state.productReducer.products);
-//     const dispatch = useDispatch();
-
-//     const addtocartHandler = (id) => {
-//         const copyuser = {
-//             ...user,
-//             cart: [...(user.cart || [])],
-//         };
-
-//         const x = copyuser.cart.findIndex((c) => c.productId === id);
-//         if (x === -1) {
-//             copyuser.cart.push({ productId: id, quantity: 1 });
-//         } else {
-//             copyuser.cart[x] = { ...copyuser.cart[x], quantity: copyuser.cart[x].quantity + 1 };
-//         }
-
-//         dispatch(asyncupdateUser(copyuser.id, copyuser));
-
-//         // Toast notification
-//         toast.success('Item added to cart!', {
-//             position: 'top-right',
-//             autoClose: 2000,
-//             hideProgressBar: false,
-//             closeOnClick: true,
-//             pauseOnHover: true,
-//             draggable: true,
-//         });
-//     };
-
-//     if (!products || products.length === 0) return "Loading...";
-
-//     return (
-//         <div className="w-full min-h-screen flex flex-wrap justify-center gap-8 py-10 px-6">
-//             {products.map((product) => (
-//                 <div
-//                     key={product.id}
-//                     className="w-[280px] sm:w-[300px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-//                 >
-//                     {/* Image */}
-//                     <div className="relative w-full h-48 overflow-hidden">
-//                         <img
-//                             src={product.image}
-//                             alt={product.title}
-//                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-//                         />
-//                         {/* Price tag */}
-//                         <span className="absolute top-2 left-2 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
-//                             ${product.price}
-//                         </span>
-
-//                     </div>
-
-//                     {/* Content */}
-//                     <div className="flex flex-col justify-between flex-grow p-4 space-y-3">
-//                         <div>
-//                             <h2 className="text-lg font-semibold text-gray-800 line-clamp-2">
-//                                 {product.title}
-//                             </h2>
-
-//                             {/* Category tag */}
-//                             <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full mt-1">
-//                                 {product.category}
-//                             </span>
-
-//                             <p className="text-sm text-gray-600 line-clamp-2 mt-2">
-//                                 {product.description.slice(0, 80)}...
-//                             </p>
-//                         </div>
-
-//                         {/* Actions */}
-//                         <div className="flex items-center justify-between mt-2">
-//                             <Link
-//                                 to={`/product/${product.id}`}
-//                                 className="text-sm text-blue-500 hover:underline"
-//                             >
-//                                 More details
-//                             </Link>
-//                         </div>
-
-//                         <button
-//                             onClick={() => addtocartHandler(product.id)}
-//                             className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium py-2 rounded-lg hover:from-cyan-500 hover:to-blue-700 transition-all"
-//                         >
-//                             Add to Cart
-//                         </button>
-//                     </div>
-//                 </div>
-//             ))}
-
-//             {/* Toast container */}
-//             <ToastContainer />
-//         </div>
-//     );
-// };
-
-// export default Products;
-
-
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { asyncupdateUser } from "../store/actions/userActions";
+import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { HeartIcon } from "@heroicons/react/24/outline"; // Heroicons v2
-import { useEffect } from "react";
+import axios from "axios";
+import InfiniteScroll from "react-infinite-scroll-component";
+
 
 const Products = () => {
     const user = useSelector((state) => state.userReducer.user);
-    const products = useSelector((state) => state.productReducer.products);
+    const [products, setProducts] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [hasMore, setHasMore] = useState(true);
     const dispatch = useDispatch();
 
-    const [searchQuery, setSearchQuery] = useState("");
-    const [filteredProducts, setFilteredProducts] = useState(products || []);
+    const fetchProducts = async () => {
+        try {
+            const res = await axios.get(`http://localhost:3000/products?_limit=2&_start=${products.length}`);
 
-    // Update filtered products whenever products list changes
+            if (res.data.length === 0) {
+                setHasMore(false);
+                return;
+            }
+            else {
+                setHasMore(true);
+            }
+            setProducts(products.concat(res.data));// Append new products to existing list
+            console.log("Fetched products:", res.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
     useEffect(() => {
         setFilteredProducts(products);
     }, [products]);
 
-
-    // Search handler
     const handleSearch = (e) => {
         const query = e.target.value.toLowerCase();
         setSearchQuery(query);
@@ -272,30 +57,60 @@ const Products = () => {
         setFilteredProducts(result);
     };
 
-    // Add to cart handler
+    // const addtocartHandler = (id) => {
+    //     if (!user) return toast.error("Please login first!");
+
+    //     const copyUser = { ...user, cart: [...(user.cart || [])] };
+    //     const idx = copyUser.cart.findIndex((c) => c.productId === id);
+
+    //     if (idx === -1) {
+    //         copyUser.cart.push({ productId: id, quantity: 1 });
+    //     } else {
+    //         copyUser.cart[idx].quantity += 1;
+    //     }
+
+    //     dispatch(asyncupdateUser(copyUser.id, copyUser));
+    //     toast.success("Item added to cart!");
+    // };
     const addtocartHandler = (id) => {
         if (!user) return toast.error("Please login first!");
 
-        const copyuser = { ...user, cart: [...(user.cart || [])] };
-        const idx = copyuser.cart.findIndex((c) => c.productId === id);
+        const copyUser = { ...user, cart: [...(user.cart || [])] };
+        const idx = copyUser.cart.findIndex((c) => c.productId === id);
 
         if (idx === -1) {
-            copyuser.cart.push({ productId: id, quantity: 1 });
+            // Add new product
+            copyUser.cart.push({ productId: id, quantity: 1 });
         } else {
-            copyuser.cart[idx] = {
-                ...copyuser.cart[idx],
-                quantity: copyuser.cart[idx].quantity + 1,
+            // Replace the existing object with a new object
+            copyUser.cart[idx] = {
+                ...copyUser.cart[idx],
+                quantity: copyUser.cart[idx].quantity + 1
             };
         }
 
-        dispatch(asyncupdateUser(copyuser.id, copyuser));
+        dispatch(asyncupdateUser(copyUser.id, copyUser));
         toast.success("Item added to cart!");
     };
+    if (!products.length) return "Loading...";
 
-    if (!products || products.length === 0) return "Loading...";
+
 
     return (
         <div className="w-full min-h-screen bg-gray-900 flex flex-col items-center py-10 px-6">
+            {/* Toast container */}
+            <ToastContainer position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                style={{ zIndex: 9999 }} />
+
             {/* Search bar */}
             <input
                 type="text"
@@ -306,65 +121,73 @@ const Products = () => {
             />
 
             {/* Products Grid */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="w-full flex flex-wrap justify-center gap-6 overflow-visible">
+                <InfiniteScroll
+                    dataLength={products.length}
+                    next={fetchProducts}
+                    loader={<h4 className="text-white">Loading more products...</h4>}
+                    hasMore={hasMore}
+                    endMessage={<p className="text-white text-center"><b>Yay! You have seen it all</b></p>}
+                    // Optional: add a scrollable div if needed
+                    style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1.5rem" }}
+                // next={fetchMoreProducts} // add your fetch more function if using
 
-
-
-
-                {filteredProducts.map((product) => (
-                    <div
-                        key={product.id}
-                        className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                    >
-                        {/* Image */}
-                        <div className="relative w-full h-48 overflow-hidden">
-                            <img
-                                src={product.image}
-                                alt={product.title}
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                            />
-                            <span className="absolute top-2 left-2 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                ${product.price}
-                            </span>
-
-                        </div>
-
-                        {/* Content */}
-                        <div className="flex flex-col justify-between flex-grow p-4 space-y-3">
-                            <div>
-                                <h2 className="text-lg font-semibold text-white line-clamp-2">
-                                    {product.title}
-                                </h2>
-                                <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full mt-1">
-                                    {product.category}
+                >
+                    {filteredProducts.map((product) => (
+                        <div
+                            key={product.id}
+                            className="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-64 flex-shrink-0"
+                        >
+                            {/* Image */}
+                            <div className="relative w-full h-48">
+                                <img
+                                    src={product.image}
+                                    alt={product.title}
+                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                />
+                                <span className="absolute top-2 left-2 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    ${product.price}
                                 </span>
-                                <p className="text-sm text-gray-400 line-clamp-2 mt-2">
-                                    {product.description.slice(0, 80)}...
-                                </p>
                             </div>
 
-                            {/* Actions */}
-                            <div className="flex items-center justify-between mt-2">
-                                <Link
-                                    to={`/product/${product.id}`}
-                                    className="text-sm text-cyan-400 hover:underline"
+                            {/* Content */}
+                            <div className="flex flex-col justify-between flex-grow p-4 space-y-3">
+                                <div>
+                                    <h2 className="text-lg font-semibold text-white line-clamp-2">
+                                        {product.title}
+                                    </h2>
+                                    <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full mt-1">
+                                        {product.category}
+                                    </span>
+                                    <p className="text-sm text-gray-400 line-clamp-2 mt-2">
+                                        {product.description.slice(0, 80)}...
+                                    </p>
+                                </div>
+
+                                {/* Actions */}
+                                <div className="flex items-center justify-between mt-2">
+                                    <Link
+                                        to={`/product/${product.id}`}
+                                        className="text-sm text-cyan-400 hover:underline"
+                                    >
+                                        More details
+                                    </Link>
+                                </div>
+
+                                <button
+                                    onClick={() => addtocartHandler(product.id)}
+                                    className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium py-2 rounded-lg hover:from-cyan-500 hover:to-blue-700 transition-all"
                                 >
-                                    More details
-                                </Link>
+                                    Add to Cart
+                                </button>
                             </div>
-
-                            <button
-                                onClick={() => addtocartHandler(product.id)}
-                                className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium py-2 rounded-lg hover:from-cyan-500 hover:to-blue-700 transition-all"
-                            >
-                                Add to Cart
-                            </button>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </InfiniteScroll>
             </div>
         </div>
     );
 };
 
 export default Products;
+

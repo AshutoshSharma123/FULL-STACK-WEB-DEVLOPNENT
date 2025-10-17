@@ -1,30 +1,3 @@
-// import { Link } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
-
-// const Cart = () => {
-//     const user = useSelector((state) => state.userReducer.user);
-//     const products = useSelector((state) => state.productReducer.products);
-//     const dispatch = useDispatch();
-
-
-
-//     return (
-//         <div>
-//             <ul>
-//                 {user?.cart?.length > 0 ? (
-//                     user.cart.map(c => <li key={c.productId}>{c.productId} - {c.quantity}</li>)
-//                 ) : (
-//                     <li>Your cart is empty</li>
-//                 )}
-//             </ul>
-//         </div>
-
-//     )
-// }
-
-// export default Cart
-
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
